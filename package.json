@@ -1,0 +1,26 @@
+{
+  "name": "final-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel js -d lib",
+    "watch": "browser-sync start --server -w --index html/start.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanyakharchenko/my-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanyakharchenko/my-project/issues"
+  },
+  "homepage": "https://github.com/tanyakharchenko/my-project#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0"
+  }
+}
