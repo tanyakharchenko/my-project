@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Catalog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/catalog.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="/lib/catalog.js"></script>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header class="header size">
+            <div class="header__up">
+                <h1 class="logo">Template</h1>
+                <a href="#" class="link link_sing-up link_header">E-mail sing up</a>
+                <a href="/html/shopping-bag.html" class="link link_header">
+                    <div class="bag">
+                        <img src="/img/ico_bag.png" alt="bag-icon" class="icon bag__icon">
+                        <span class="bag__text">Bag</span>
+                        <span class="bag__price"></span>
+                        <span class="bag__item-num">(0)</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header__down">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list_item"><a href="#" class="link link_header">Women</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Men</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Handbag</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Accessories</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Sale</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">New Arrivals</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Clearance</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Store Locator</a></li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <input type="text" class="search__input" placeholder="Style Name">
+                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon">
+                </div>
+            </div>
+        </header>
+        <main class="main size">
+            <div class="wrapper">
+                <section class="filter">
+                    <ul class="filter__items">
+                        <li class="filter__item">
+                            <h6 class="caption_6 fashion">Fashion</h6>
+                            <div class="arrow-down"></div>
+                            <ul class="drop-menu">
+                                <li class="drop-menu__item">Not selected</li>
+                                <li class="drop-menu__item">Casual style</li>
+                                <li class="drop-menu__item">Classical style</li>
+                            </ul>
+                        </li>
+                        <li class="filter__item">
+                            <h6 class="caption_6">Product type</h6>
+                            <div class="arrow-down"></div>
+                            <ul class="drop-menu">
+                                <li class="drop-menu__item">Not selected</li>
+                                <li class="drop-menu__item">Type1</li>
+                                <li class="drop-menu__item">Type2</li>
+                            </ul>
+                        </li>
+                        <li class="filter__item">
+                            <h6 class="caption_6 color">Color</h6>
+                            <div class="arrow-down"></div>
+                            <ul class="drop-menu">
+                                <li class="drop-menu__item">Not selected</li>
+                                <li class="drop-menu__item">Black</li>
+                                <li class="drop-menu__item">Blue</li>
+                                <li class="drop-menu__item">Red</li>
+                                <li class="drop-menu__item">Green</li>
+                                <li class="drop-menu__item">Golden</li>
+                            </ul>
+                        </li>
+                        <li class="filter__item">
+                            <h6 class="caption_6">Brand</h6>
+                            <div class="arrow-down"></div>
+                            <ul class="drop-menu">
+                                <li class="drop-menu__item">Not selected</li>
+                                <li class="drop-menu__item">Antipodium</li>
+                                <li class="drop-menu__item">Podium</li>
+                            </ul>
+                        </li>
+                        <li class="filter__item">
+                            <h6 class="caption_6">Size</h6>
+                            <div class="arrow-down"></div>
+                            <ul class="drop-menu">
+                                <li class="drop-menu__item">Not selected</li>
+                                <li class="drop-menu__item">UK 17</li>
+                                <li class="drop-menu__item">UK 18</li>
+                                <li class="drop-menu__item">UK 19</li>
+                                <li class="drop-menu__item">UK 52</li>
+                                <li class="drop-menu__item">UK 54</li>
+                                <li class="drop-menu__item">UK 56</li>
+                            </ul>
+                        </li>
+                        <li class="filter__item">
+                            <h6 class="caption_6">Price range</h6>
+                            <div class="arrow-down"></div>
+                            <ul class="drop-menu">
+                                <li class="drop-menu__item">Not selected</li>
+                                <li class="drop-menu__item">Increase</li>
+                                <li class="drop-menu__item">Decrease</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="wrapper">
+                <section class="catalog">
+                    <div class="items-catalog">
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item new">
+                                    <img src="/img/item1.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">Only Skinny Jeans</h4>
+                                    <h5 class="caption caption_5">£65.50</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item new">
+                                    <img src="/img/item2.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">Neck Knitted Jumper</h4>
+                                    <h5 class="caption caption_5">£76.25</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item">
+                                    <img src="/img/item3.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">Turtle Neck Jumper in Rib</h4>
+                                    <h5 class="caption caption_5">£130.25</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item">
+                                    <img src="/img/item4.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">With Patchwork Crochet</h4>
+                                    <h5 class="caption caption_5">£80.60</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="extra-off">
+                        <h2 class="caption caption_2">Last weekend <span class="text_red">extra 50%</span> off on all
+                            reduced boots and shoulder bags</h2>
+                        <h3 class="caption caption_3">This offer is valid in-store and online. Prices displayed reflect
+                            this additional discount. This offer ends at 11:59 GMT on March 1st 2019</h3>
+                    </div>
+                    <div class="items-catalog">
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item new">
+                                    <img src="/img/item1.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">Only Skinny Jeans</h4>
+                                    <h5 class="caption caption_5">£65.50</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item new">
+                                    <img src="/img/item2.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">Neck Knitted Jumper</h4>
+                                    <h5 class="caption caption_5">£76.25</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item">
+                                    <img src="/img/item3.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">Turtle Neck Jumper in Rib</h4>
+                                    <h5 class="caption caption_5">£130.25</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item">
+                                    <img src="/img/item4.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">With Patchwork Crochet</h4>
+                                    <h5 class="caption caption_5">£80.60</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item new">
+                                    <img src="/img/item1.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">Only Skinny Jeans</h4>
+                                    <h5 class="caption caption_5">£65.50</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item new">
+                                    <img src="/img/item2.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">Neck Knitted Jumper</h4>
+                                    <h5 class="caption caption_5">£76.25</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item">
+                                    <img src="/img/item3.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">Turtle Neck Jumper in Rib</h4>
+                                    <h5 class="caption caption_5">£130.25</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="items-catalog__item">
+                            <a href="/html/item.html" class="link link_item">
+                                <div class="item">
+                                    <img src="/img/item4.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
+                                    <h4 class="caption caption_4">With Patchwork Crochet</h4>
+                                    <h5 class="caption caption_5">£80.60</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="common-button">Show more</button>
+                </section>
+            </div>
+        </main>
+        <aside class="aside">
+            <div class="wrapper">
+                <section class="banners">
+                    <div class="banners__left">
+                        <img src="/img/catalog-banner-left.jpg" alt="banner adidas" class="img img_aside">
+                    </div>
+                    <div class="banners__right">
+                        <img src="/img/catalog-banner-right-1.jpg" alt="banner repear patches" class="img img_aside">
+                        <img src="/img/catalog-banner-right-2.jpg" alt="banner sales 70%" class="img img_aside img_last">
+                    </div>
+                </section>
+            </div>
+        </aside>
+
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer-top">
+                    <section class="additional-information">
+                        <div class="additional-information__content">
+                            <div class="quick-links">
+                                <h6 class="caption caption_6">Quick Links</h6>
+                                <ul class="additional-information-list">
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Store locator</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Gift cards</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Size guide</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">About us</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Support</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="customer-care">
+                                <h6 class="caption caption_6">Customer Care</h6>
+                                <ul class="additional-information-list">
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Customer service</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Track my oder</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Return policy</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Shipping & delivery</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Contact us</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Careers</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="oder-and-question">
+                        <div class="oder-and-question_up">
+                            <div class="questions">
+                                <h6 class="caption caption_6">Questions</h6>
+                                <a href="#" class="link oder-and-question__link link_footer">
+                                    <img src="/img/twi_ico.png" alt="twitter-icon" class="icon questions__icon">
+                                    <p class="oder-and-question__text">Tweet us <span class="oder-and-question__text_bold">@template</span></p>
+                                </a>
+                            </div>
+                            <div class="order">
+                                <h6 class="caption caption_6">Order by phone</h6>
+                                <a href="tel: 88004094712" class="link oder-and-question__link link_footer">8-800-409-47-12</a>
+                            </div>
+                        </div>
+                        <div class="oder-and-question_down">
+                            <div class="delivery-info">
+                                <p class="delivery-info__text">We have our own delivery service which operates in 23
+                                    major
+                                    European
+                                    cities. Delivery time - 3-5 days.</p>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="link link_social">
+                                    <img src="/img/fb.png" alt="facebook-icon" class="icon">
+                                </a>
+                                <a href="#" class="link link_social" class="icon">
+                                    <img src="/img/twi.png" alt="twitter-icon">
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="wrapper">
+                <section class="footer-bottom">
+                    <div class="rights">
+                        <p class="rights__text">© 2010-2015, The Template Group inc.</p>
+                    </div>
+                    <div class="share">
+                        <a href="#" class="link link_social">
+                            <h6 class="caption caption_6">Share</h6>
+                        </a>
+                        <p class="share__num">1 437</p>
+                    </div>
+                    <div class="footer-bottom__links">
+                        <a href="#" class="link footer-bottom__links_link link_footer">Legal notice</a>
+                        <a href="#" class="link footer-bottom__links_link link_footer">Privacy policy</a>
+                        <a href="#" class="link footer-bottom__links_link link_footer">Site map</a>
+                    </div>
+                </section>
+            </div>
+    </div>
+</body>
+
+</html>

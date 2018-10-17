@@ -7,6 +7,7 @@
     <title>Start</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/start.css" />
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
     <script src="/lib/start.js"></script>
@@ -21,7 +22,9 @@
                 <a href="/html/shopping-bag.html" class="link link_header">
                     <div class="bag">
                         <img src="/img/ico_bag.png" alt="bag-icon" class="icon bag__icon">
-                        <span class="bag__text">Bag (0)</span> <br>
+                        <span class="bag__text">Bag</span>
+                        <span class="bag__price"></span>
+                        <span class="bag__item-num">(0)</span>
                     </div>
                 </a>
             </div>
@@ -74,6 +77,9 @@
                                 </button>
                                 <a href="/html/item.html" class="link link_item">
                                     <div class="item new">
+                                        <div class="item_hover">
+                                            <p class="text_view-item">View item</p>
+                                        </div>
                                         <img src="/img/best-offer1.jpg" alt="best-offer-image" class="img img_item">
                                         <h4 class="caption caption_4">Only Skinny Jeans</h4>
                                         <h5 class="caption caption_5">£65.50</h5>
@@ -90,6 +96,9 @@
                                 </button>
                                 <a href="/html/item.html" class="link link_item">
                                     <div class="item">
+                                        <div class="item_hover">
+                                            <p class="text_view-item">View item</p>
+                                        </div>
                                         <img src="/img/best-offer2.jpg" alt="best-offer-image" class="img img_item">
                                         <h4 class="caption caption_4">Levi's Jeans for women</h4>
                                         <h5 class="caption caption_5">£95.50</h5>
@@ -128,6 +137,9 @@
                             <a href="/html/item.html" class="link link_item">
                                 <div class="item new">
                                     <img src="/img/item1.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
                                     <h4 class="caption caption_4">Only Skinny Jeans</h4>
                                     <h5 class="caption caption_5">£65.50</h5>
                                 </div>
@@ -137,6 +149,9 @@
                             <a href="/html/item.html" class="link link_item">
                                 <div class="item new">
                                     <img src="/img/item2.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
                                     <h4 class="caption caption_4">Neck Knitted Jumper</h4>
                                     <h5 class="caption caption_5">£76.25</h5>
                                 </div>
@@ -146,6 +161,9 @@
                             <a href="/html/item.html" class="link link_item">
                                 <div class="item">
                                     <img src="/img/item3.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
                                     <h4 class="caption caption_4">Turtle Neck Jumper in Rib</h4>
                                     <h5 class="caption caption_5">£130.25</h5>
                                 </div>
@@ -155,13 +173,18 @@
                             <a href="/html/item.html" class="link link_item">
                                 <div class="item">
                                     <img src="/img/item4.jpg" alt="catalog-image" class="img_item">
+                                    <div class="item_hover">
+                                        <p class="text_view-item">View item</p>
+                                    </div>
                                     <h4 class="caption caption_4">With Patchwork Crochet</h4>
                                     <h5 class="caption caption_5">£80.60</h5>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <button class="common-button all-button">All arrivals</button>
+                    <button class="common-button all-button">
+                        <a href="/html/catalog.html" class="link"></a>
+                        All arrivals</button>
                 </section>
             </div>
         </main>
@@ -257,7 +280,7 @@
                         <a href="#" class="link link_social">
                             <h6 class="caption caption_6">Share</h6>
                         </a>
-                            <p class="share__num">1 437</p>
+                        <p class="share__num">1 437</p>
                     </div>
                     <div class="footer-bottom__links">
                         <a href="#" class="link footer-bottom__links_link link_footer">Legal notice</a>

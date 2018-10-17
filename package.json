@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel js -d lib",
-    "watch": "browser-sync start --server -w --index html/start.html"
+    "watch-start": "browser-sync start --server -w --index html/start.html",
+    "watch-catalog": "browser-sync start --server -w --index html/catalog.html"
   },
   "repository": {
     "type": "git",
