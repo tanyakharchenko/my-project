@@ -100,12 +100,4 @@
     .arrow-down {
         display: none;
     }
-
-    .img_last {
-        display: none;
-    }
-
-    .items-catalog {
-        justify-content: space-around;
-    }
 }

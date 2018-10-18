@@ -1,0 +1,187 @@
+.back-block {
+    max-width: 1180px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    height: 3.6em;
+}
+
+.link_back-block {
+    display: flex;
+}
+
+.back-block__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin-left: 0.5em;
+}
+
+.item-characters {
+    margin-top: 3.5em; 
+    display: flex;
+}
+
+.item-photo {
+
+}
+
+.item-photo_main {
+
+}
+
+.item-photo_secondary {
+    display: flex;
+}
+
+.item-photo_full {
+    width: 590px;
+    height: 394px;
+}
+
+.item-photo_thumb {
+    width: 197px;
+    height: 130px;
+    margin: 0;
+}
+
+.item-parameters {
+    padding-left: 2.8em;
+}
+
+.caption {
+    text-align: left;
+}
+
+.caption_2 {
+    font-size: 1.625em;
+    letter-spacing: 0;
+    margin-top: 1em;
+}
+
+.caption_3 {  
+    line-height: 1.5;
+    margin-top: 1.2em;
+    padding-left: 0;
+}
+
+.caption_5 {
+    font-size: 1.6em;
+    margin-top: 2em;
+    margin-bottom: 1.7em;
+}
+
+.caption_hide {
+    display: none;
+}
+
+.parameters {
+    display: flex;
+    flex-direction: column;
+}
+
+.parameter {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.parameter__text {
+    width: 3em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75em;
+}
+
+.parameter-list {
+    display: flex;
+    margin-left: 3em;
+}
+
+.parameter-list__item {
+    width: 5em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.875em;
+    margin-right: 2.7em;
+}
+
+.caption-oder {
+    display: flex;
+    flex-direction: column;
+}
+
+.parameter-list__item:last-child {
+    margin-right: 0;
+}
+
+.common-button {
+    margin: 2.5em auto 0 auto;
+}
+
+.main {
+    margin-bottom: 6em;
+}
+
+@media screen and (max-width: 1023px) {
+    .back-block {
+        padding-left: 2em;
+    }
+
+    .item-characters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .item-photo {
+        display: flex;  
+        margin: 0 2em;
+    }
+
+    .item-photo_main {
+        height: 
+    }
+
+    .item-photo_secondary {
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 394px;
+    }
+    .img {
+        width: 100%;
+    }
+
+    .item-parameters {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parameters {
+        align-items: center;
+    }
+
+    .caption_3 {
+        padding: 0 6em;
+        margin-bottom: 2em;
+        line-height: 2em;
+        text-align: center;
+    }
+
+    .caption_5 {
+        order: -1;
+        margin-top: 1em;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .caption_hide {
+        display: inline;
+    }
+
+}

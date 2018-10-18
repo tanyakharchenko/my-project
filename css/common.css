@@ -452,6 +452,25 @@
     color: #f14a58;
 }
 
+.banners {
+    max-width: 1300px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.banners__left {
+
+}
+
+.banners__right {
+    display: flex;
+}
+
+.img_aside {
+    height: 384px;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 1023px) {
     .header {
         padding: 2em;
@@ -510,4 +529,13 @@
     .footer-bottom {
         margin: 1.5em 2em;
     }
+
+    .img_last {
+        display: none;
+    }
+
+    .items-catalog {
+        justify-content: space-around;
+    }
+
 }
