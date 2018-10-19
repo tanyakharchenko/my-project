@@ -425,7 +425,7 @@
 }
 
 .add-button_tablet {
-    margin: 4em auto 0 auto;
+    margin: 4em auto 0;
 }
 
 .items-catalog {
@@ -434,6 +434,9 @@
     width: 100%;
     margin-top: 3.2em;
     flex-wrap: wrap;
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .items-catalog__item {
@@ -469,6 +472,10 @@
 .img_aside {
     height: 384px;
     overflow: hidden;
+}
+
+.none {
+    display: none;
 }
 
 @media screen and (max-width: 1023px) {
@@ -534,8 +541,8 @@
         display: none;
     }
 
-    .items-catalog {
-        justify-content: space-around;
+    .link_item:hover .item_hover {
+        display: none;
     }
 
 }

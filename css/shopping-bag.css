@@ -1,0 +1,182 @@
+.caption_2 {
+    font-size: 1.625em;
+}
+
+.header {
+    padding-top: 1em; 
+}
+
+.caption-block {
+    margin: 0.7em auto;
+    max-width: 1180px;
+    display: flex;
+    padding-left: 1em; 
+}
+
+.bag-filling {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.item {
+    display: flex;
+    margin-bottom: 0;
+    width: 50%;
+}
+
+.link_item:hover + .item__parameters .caption_4 {
+    color:#f14a58;
+}
+
+.item__parameters {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5em;
+}
+
+.item-parameter {
+    display: flex;
+    margin-bottom: 0.8em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75em;
+}
+
+.item-parameter__name {
+    margin-right: 0.5em;
+}
+
+.item-parameter_quantity {
+    display: flex;
+    align-items: center;
+}
+
+.caption_4 {
+    margin-top: 0.8em;
+}
+
+.caption_5 {
+    font-size: 1.042em;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 2em;
+    margin-left: 0.2em;
+}
+
+.item__button {
+    border: none;
+    background: none;
+    color: #f14a58;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    margin: 0 0.2em;
+    outline: none;
+}
+
+.item__button:hover {
+    outline: 1px solid #f14a58;
+}
+
+.item__button:active {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.item__button_remove {
+    font-size: 0.813em;
+    font-weight: 700;
+    margin-top: 0.7em; 
+}
+
+.aside {
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
+    margin-top: 4em;
+}
+
+.delivery__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.75em;
+    color: black;
+    text-align: center;
+}
+
+.total-count {
+    display: flex;
+    max-width: 1180px;
+    margin: 0 auto 2.6em;
+    justify-content: space-between;
+    align-items: center;
+    height: 10em;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 2em;
+    align-items: flex-end;
+}
+
+.common-button {
+    margin-top: 0;
+    margin-left: 10%;
+}
+
+.empty-button {
+    background: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.813em;
+}
+
+.discount {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: #f14a58;
+    margin-bottom: 0.7em;
+}
+
+.discount_num {
+    font-size: 1.125em;
+}
+
+.price {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.375em;
+}
+
+@media screen and (max-width: 1023px) {
+    .caption-block {
+        padding: 1em 2em; 
+    }
+
+    .bag-filling {
+        padding: 0 2em;
+    }
+
+    .caption {
+        text-align: left;
+    }
+
+    .caption_4 {
+        line-height: 1.5em;
+    }
+
+    .total-count {
+        padding: 0 2em;
+        margin-bottom: 4em;
+    }
+
+    .prices {
+        align-items: center;
+        margin-top: 3em;
+    } 
+}

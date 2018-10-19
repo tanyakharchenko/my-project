@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shopping Bag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/shopping-bag.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="/lib/shopping-bag.js"></script>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header class="header size">
+            <div class="header__up">
+                <h1 class="logo">Template</h1>
+                <a href="#" class="link link_sing-up link_header">E-mail sing up</a>
+                <a href="/html/shopping-bag.html" class="link link_header">
+                    <div class="bag">
+                        <img src="/img/ico_bag.png" alt="bag-icon" class="icon bag__icon">
+                        <span class="bag__text">Bag</span>
+                        <span class="bag__price"></span>
+                        <span class="bag__item-num">(0)</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header__down">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list_item"><a href="#" class="link link_header">Women</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Men</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Handbag</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Accessories</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Sale</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">New Arrivals</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Clearance</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Store Locator</a></li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <input type="text" class="search__input" placeholder="Style Name">
+                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon">
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="wrapper">
+                <div class="caption-block">
+                    <h2 class="caption caption_2">Shopping bag</h2>
+                </div>
+            </div>
+            <div class="wrapper">
+                <section class="bag-filling">
+                    <div class="item">
+                        <a href="/html/item.html" class="link link_item">
+                            <div class="item__image">
+                                <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
+                                <div class="item_hover">
+                                    <p class="text_view-item">View item</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="item__parameters">
+                            <a href="/html/item.html" class="link link_item">
+                                <h4 class="caption caption_4">Only Skinny Jeans</h4>
+                            </a>
+                            <h5 class="caption caption_5">£65.50</h5>
+                            <div class="item-parameter item-parameter_color">
+                                <p class="item-parameter__name">Color: </p>
+                                <p class="item-parameter__value">Phillipa wash</p>
+                            </div>
+                            <div class="item-parameter item-parameter_size">
+                                <p class="item-parameter__name">Size: </p>
+                                <p class="item-parameter__value">UK 17</p>
+                            </div>
+                            <div class="item-parameter item-parameter_quantity">
+                                <p class="item-parameter__name">Quantity: </p>
+                                <button class="item__button">-</button>
+                                <p class="quantity-counter">1</p>
+                                <button class="item__button">+</button>
+                            </div>
+                            <button class="item__button item__button_remove">Remove item</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="/html/item.html" class="link link_item">
+                            <div class="item__image">
+                                <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
+                                <div class="item_hover">
+                                    <p class="text_view-item">View item</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="item__parameters">
+                            <a href="/html/item.html" class="link link_item">
+                                <h4 class="caption caption_4">Only Skinny Jeans</h4>
+                            </a>
+                            <h5 class="caption caption_5">£65.50</h5>
+                            <div class="item-parameter item-parameter_color">
+                                <p class="item-parameter__name">Color: </p>
+                                <p class="item-parameter__value">Phillipa wash</p>
+                            </div>
+                            <div class="item-parameter item-parameter_size">
+                                <p class="item-parameter__name">Size: </p>
+                                <p class="item-parameter__value">UK 17</p>
+                            </div>
+                            <div class="item-parameter item-parameter_quantity">
+                                <p class="item-parameter__name">Quantity: </p>
+                                <button class="item__button">-</button>
+                                <p class="quantity-counter">1</p>
+                                <button class="item__button">+</button>
+                            </div>
+                            <button class="item__button item__button_remove">Remove item</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="/html/item.html" class="link link_item">
+                            <div class="item__image">
+                                <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
+                                <div class="item_hover">
+                                    <p class="text_view-item">View item</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="item__parameters">
+                            <a href="/html/item.html" class="link link_item">
+                                <h4 class="caption caption_4">Only Skinny Jeans</h4>
+                            </a>
+                            <h5 class="caption caption_5">£65.50</h5>
+                            <div class="item-parameter item-parameter_color">
+                                <p class="item-parameter__name">Color: </p>
+                                <p class="item-parameter__value">Phillipa wash</p>
+                            </div>
+                            <div class="item-parameter item-parameter_size">
+                                <p class="item-parameter__name">Size: </p>
+                                <p class="item-parameter__value">UK 17</p>
+                            </div>
+                            <div class="item-parameter item-parameter_quantity">
+                                <p class="item-parameter__name">Quantity: </p>
+                                <button class="item__button">-</button>
+                                <p class="quantity-counter">1</p>
+                                <button class="item__button">+</button>
+                            </div>
+                            <button class="item__button item__button_remove">Remove item</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="/html/item.html" class="link link_item">
+                            <div class="item__image">
+                                <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
+                                <div class="item_hover">
+                                    <p class="text_view-item">View item</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="item__parameters">
+                            <a href="/html/item.html" class="link link_item">
+                                <h4 class="caption caption_4">Only Skinny Jeans</h4>
+                            </a>
+                            <h5 class="caption caption_5">£65.50</h5>
+                            <div class="item-parameter item-parameter_color">
+                                <p class="item-parameter__name">Color: </p>
+                                <p class="item-parameter__value">Phillipa wash</p>
+                            </div>
+                            <div class="item-parameter item-parameter_size">
+                                <p class="item-parameter__name">Size: </p>
+                                <p class="item-parameter__value">UK 17</p>
+                            </div>
+                            <div class="item-parameter item-parameter_quantity">
+                                <p class="item-parameter__name">Quantity: </p>
+                                <button class="item__button">-</button>
+                                <p class="quantity-counter">1</p>
+                                <button class="item__button">+</button>
+                            </div>
+                            <button class="item__button item__button_remove">Remove item</button>
+                        </div>
+                    </div>
+                </section>
+        </main>
+        <div class="wrapper">
+            <aside class="aside">
+                <section class="delivery">
+                    <p class="delivery__text">You're qualified for Free UK Next Day Delivery on your order. Don't
+                        forget to enter the code <span class="text_red">nextday</span> at checkout</p>
+                </section>
+        </div>
+        </aside>
+        <main class="main">
+            <section class="total-count">
+                <button class="empty-button">Empty bag</button>
+                <button class="common-button">Checkout</button>
+                <div class="prices">
+                    <p class="discount">Applied discount: <span class="discount_num">£15.00</span></p>
+                    <p class="price">Total price: <span class="price_num">£236.50</span></p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer-top">
+                    <section class="additional-information">
+                        <div class="additional-information__content">
+                            <div class="quick-links">
+                                <h6 class="caption caption_6">Quick Links</h6>
+                                <ul class="additional-information-list">
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Store locator</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Gift cards</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Size guide</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">About us</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Support</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="customer-care">
+                                <h6 class="caption caption_6">Customer Care</h6>
+                                <ul class="additional-information-list">
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Customer service</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Track my oder</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Return policy</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Shipping & delivery</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Contact us</a>
+                                    </li>
+                                    <li class="additional-information-list__item">
+                                        <a href="#" class="link link_footer">Careers</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="oder-and-question">
+                        <div class="oder-and-question_up">
+                            <div class="questions">
+                                <h6 class="caption caption_6">Questions</h6>
+                                <a href="#" class="link oder-and-question__link link_footer">
+                                    <img src="/img/twi_ico.png" alt="twitter-icon" class="icon questions__icon">
+                                    <p class="oder-and-question__text">Tweet us <span class="oder-and-question__text_bold">@template</span></p>
+                                </a>
+                            </div>
+                            <div class="order">
+                                <h6 class="caption caption_6">Order by phone</h6>
+                                <a href="tel: 88004094712" class="link oder-and-question__link link_footer">8-800-409-47-12</a>
+                            </div>
+                        </div>
+                        <div class="oder-and-question_down">
+                            <div class="delivery-info">
+                                <p class="delivery-info__text">We have our own delivery service which operates in 23
+                                    major
+                                    European
+                                    cities. Delivery time - 3-5 days.</p>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="link link_social">
+                                    <img src="/img/fb.png" alt="facebook-icon" class="icon">
+                                </a>
+                                <a href="#" class="link link_social" class="icon">
+                                    <img src="/img/twi.png" alt="twitter-icon">
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="wrapper">
+                <section class="footer-bottom">
+                    <div class="rights">
+                        <p class="rights__text">© 2010-2015, The Template Group inc.</p>
+                    </div>
+                    <div class="share">
+                        <a href="#" class="link link_social">
+                            <h6 class="caption caption_6">Share</h6>
+                        </a>
+                        <p class="share__num">1 437</p>
+                    </div>
+                    <div class="footer-bottom__links">
+                        <a href="#" class="link footer-bottom__links_link link_footer">Legal notice</a>
+                        <a href="#" class="link footer-bottom__links_link link_footer">Privacy policy</a>
+                        <a href="#" class="link footer-bottom__links_link link_footer">Site map</a>
+                    </div>
+                </section>
+            </div>
+        </footer>
+    </div>
+    </div>
+</body>
+
+</html>

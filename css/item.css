@@ -20,6 +20,9 @@
 .item-characters {
     margin-top: 3.5em; 
     display: flex;
+    max-width: 1180px;
+    width: 100%;
+    margin: 3.5em auto;
 }
 
 .item-photo {
@@ -111,7 +114,7 @@
     margin-right: 2.7em;
 }
 
-.caption-oder {
+.caption-order {
     display: flex;
     flex-direction: column;
 }
@@ -121,7 +124,7 @@
 }
 
 .common-button {
-    margin: 2.5em auto 0 auto;
+    margin: 2.5em auto 0;
 }
 
 .main {

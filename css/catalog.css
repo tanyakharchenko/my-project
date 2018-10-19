@@ -3,16 +3,18 @@
 }
 
 .filter {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .filter__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .filter__item {
     width: 100%;
-    padding-left: 1em;
     padding-top: 1em;
     height: 4em; 
     cursor: pointer;
@@ -74,7 +76,7 @@
 }
 
 .common-button {
-    margin: 3em auto 4em auto;
+    margin: 3em auto 4em;
 }
 
 .banners {
@@ -96,8 +98,24 @@
     overflow: hidden;
 }
 
+
 @media screen and (max-width: 1023px) {
     .arrow-down {
         display: none;
+    }
+
+    .arrow-down_shown {
+        display: block;
+        right: -3em;
+    }
+
+    .filter__items {
+        justify-content: flex-start;
+        margin-left: 2em;
+    }
+
+    .filter__item {
+        width: auto;
+        padding-left: 0;
     }
 }
