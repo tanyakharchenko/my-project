@@ -17,16 +17,20 @@
     <div class="content-wrapper">
         <header class="header size">
             <div class="header__up">
-                <h1 class="logo">Template</h1>
+                <h1 class="logo logo_desktop">Template</h1>
+                <h1 class="logo logo_mobile">TL</h1>
                 <a href="#" class="link link_sing-up link_header">E-mail sing up</a>
-                <a href="/html/shopping-bag.html" class="link link_header">
-                    <div class="bag">
-                        <img src="/img/ico_bag.png" alt="bag-icon" class="icon bag__icon">
-                        <span class="bag__text">Bag</span>
-                        <span class="bag__price"></span>
-                        <span class="bag__item-num">(0)</span>
-                    </div>
-                </a>
+                <div class="bag-menu-block">
+                    <a href="/html/shopping-bag.html" class="link link_header">
+                        <div class="bag">
+                            <img src="/img/ico_bag.png" alt="bag-icon" class="icon bag__icon">
+                            <span class="bag__text">Bag</span>
+                            <span class="bag__price"></span>
+                            <span class="bag__item-num">(0)</span>
+                        </div>
+                    </a>
+                    <div class="menu_mobile">&#9776;</div>
+                </div>
             </div>
             <div class="header__down">
                 <nav class="menu">
@@ -107,7 +111,7 @@
                                     <img src="/img/down.png" alt="button-down">
                                 </button>
                             </div>
-                            <i class="best-offer__symbol">=</i>
+                            <i class="best-offer__symbol best-offer__symbol_desktop">=</i>
                         </div>
                         <div class="best-offer__bag-block">
                             <div class="best-offer__old-price">
@@ -116,6 +120,7 @@
                                 <i class="old-price">£161.00</i>
                             </div>
                             <div class="best-offer__new-price">
+                                <i class="best-offer__symbol best-offer__symbol_mobile">=</i>
                                 <i class="new-price">£146.00</i>
                             </div>
                             <button class="common-button add-button">Add to bag
@@ -135,7 +140,7 @@
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
                                 <div class="item new">
-                                    <img src="/img/item1.jpg" alt="catalog-image" class="img_item">
+                                    <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
                                     </div>
@@ -147,7 +152,7 @@
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
                                 <div class="item new">
-                                    <img src="/img/item2.jpg" alt="catalog-image" class="img_item">
+                                    <img src="/img/item2.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
                                     </div>
@@ -159,7 +164,7 @@
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
                                 <div class="item">
-                                    <img src="/img/item3.jpg" alt="catalog-image" class="img_item">
+                                    <img src="/img/item3.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
                                     </div>
@@ -171,7 +176,7 @@
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
                                 <div class="item">
-                                    <img src="/img/item4.jpg" alt="catalog-image" class="img_item">
+                                    <img src="/img/item4.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
                                     </div>
@@ -237,6 +242,7 @@
                             </div>
                         </div>
                     </section>
+                    <div class="wrapper wrapper_mobile"></div>
                     <section class="oder-and-question">
                         <div class="oder-and-question_up">
                             <div class="questions">
@@ -253,12 +259,21 @@
                         </div>
                         <div class="oder-and-question_down">
                             <div class="delivery-info">
-                                <p class="delivery-info__text">We have our own delivery service which operates in 23
+                                <p class="delivery-info__text">We have our own delivery service which operates in
+                                    23
                                     major
                                     European
                                     cities. Delivery time - 3-5 days.</p>
                             </div>
-                            <div class="social-links">
+                        </div>
+                        <div class="wrapper wrapper_mobile"></div>
+                        <div class="social-links">
+                            <div class="footer-bottom__links footer-bottom__links_mobile">
+                                <a href="#" class="link footer-bottom__links_link link_footer">Legal notice</a>
+                                <a href="#" class="link footer-bottom__links_link link_footer">Privacy policy</a>
+                                <a href="#" class="link footer-bottom__links_link link_footer">Site map</a>
+                            </div>
+                            <div class="social-links-wrapper">
                                 <a href="#" class="link link_social">
                                     <img src="/img/fb.png" alt="facebook-icon" class="icon">
                                 </a>
