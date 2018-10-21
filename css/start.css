@@ -86,7 +86,6 @@
     width: 35%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
 }
 
 .best-offer__old-price {

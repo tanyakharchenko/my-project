@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
 }
 
 .img {
@@ -80,8 +81,22 @@
     display: none;
 }
 
-.menu_mobile {
+.menu-icon {
     display: none;
+}
+
+.menu_mobile {
+    width: 100%;
+    top: 5em;
+    background: white;
+    z-index: 5;
+    position: absolute;
+    top: 100%;
+    left:0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    border-top: 1px solid #e5e5e5;
 }
 
 .bag {
@@ -185,6 +200,10 @@
     text-decoration: underline;
 }
 
+.link_social {
+    margin-right: 1em;
+}
+
 .link_social:hover {
     transform: scale(1.1)
 }
@@ -252,17 +271,20 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 1.5em;
-    margin-top: 3em;
-    cursor: pointer;
     outline: none; 
-    max-width: 325px;
-    width: 82%;
-    height: 3em;
+    width: 13em;
+    padding: 0.7em 0;
 }
 
 .common-button:hover {
     color: #f14a58;
     border: 1px solid #f14a58;
+}
+
+.link_common-button {
+    display: block;
+    max-width: 325px;
+    margin-top: 4em;
 }
 
 .footer {
@@ -374,7 +396,7 @@
 
 .social-links {
     margin-top: 2.4em;
-    width: 9%;
+    width: 12%;
     display: flex;
     justify-content: space-between; 
 }
@@ -497,12 +519,15 @@
         display: flex;
         position: absolute;
         right: 5%;
-        top: 5.2em;
     }
     
     .search__input {
         display: none;
-        width: 90%
+        width: 100%
+    }
+
+    .search__icon {
+        height: 0.8em;
     }
 
     .search:hover {
@@ -551,10 +576,6 @@
         margin-top: 3em;
     }
 
-    .link_social {
-        margin-right: 1em;
-    }
-
     .footer-bottom {
         margin: 1.5em 2em;
     }
@@ -582,8 +603,15 @@
         display: block;
     }
 
-    .menu_mobile {
+    .menu-icon {
         display: block;
+        border: none;
+        background: none;
+        font-size: 1.2em;
+        cursor: pointer;
+        outline: none;
+        width: 50px;
+        height: 40px;
     }
 
     .link_sing-up {
@@ -686,6 +714,7 @@
         position: absolute;
         right: 1em;
         display: flex;
+        align-items: center;
     }
 
     .oder-and-question_down {
@@ -698,6 +727,41 @@
 
     .img_aside {
         height: auto;
+    }
+
+    .menu__list {
+        flex-direction: column;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 2;
+        background: white;
+    }
+
+    .main {
+        margin-top: 60px;
+    }
+
+    .menu__list {
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+
+    .menu__list_item {
+        margin-bottom: 2em;
+    }
+
+    .search {
+        width: 40%;
+        position: static;
+        margin-left: 2em;
+        margin-bottom: 1em;
+        border-bottom: 0.1em solid #e5e5e5;
+    }
+
+    .search__input {
+        display: block;
     }
 
 }

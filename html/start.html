@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/start.css" />
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
-    <script src="/lib/start.js"></script>
+    <script src="/js/common.js" defer></script>
+    <script src="/lib/start.js" defer></script>
 </head>
 
 <body>
@@ -29,8 +29,24 @@
                             <span class="bag__item-num">(0)</span>
                         </div>
                     </a>
-                    <div class="menu_mobile">&#9776;</div>
+                    <button class="menu-icon" id="menu-icon">&#9776;</button>
                 </div>
+                <nav class="menu_mobile none" id="mobile-menu">
+                    <ul class="menu__list">
+                        <li class="menu__list_item"><a href="#" class="link link_header">Women</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Men</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Handbag</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Accessories</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Sale</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">New Arrivals</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Clearance</a></li>
+                        <li class="menu__list_item"><a href="#" class="link link_header">Store Locator</a></li>
+                    </ul>
+                    <div class="search">
+                        <input type="text" class="search__input" placeholder="Style Name">
+                        <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon">
+                    </div>
+                </nav>
             </div>
             <div class="header__down">
                 <nav class="menu">
@@ -123,13 +139,12 @@
                                 <i class="best-offer__symbol best-offer__symbol_mobile">=</i>
                                 <i class="new-price">£146.00</i>
                             </div>
-                            <button class="common-button add-button">Add to bag
-                                <a href="/html/shopping-bag.html" class="link"></a>
-                            </button>
+                            <a href="/html/shopping-bag.html" class="link link_common-button">
+                                <button class="common-button add-button">Add to bag </button>
+                            </a>
                         </div>
                     </div>
                     <button class="common-button add-button add-button_tablet none">Add to bag
-                        <a href="/html/shopping-bag.html" class="link"></a>
                     </button>
                 </section>
             </div>
@@ -186,9 +201,9 @@
                             </a>
                         </div>
                     </div>
-                    <button class="common-button all-button">
-                        <a href="/html/catalog.html" class="link"></a>
-                        All arrivals</button>
+                    <a href="/html/catalog.html" class="link link_common-button">
+                        <button class="common-button add-button">All arrivals </button>
+                    </a>
                 </section>
             </div>
         </main>

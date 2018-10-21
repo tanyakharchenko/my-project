@@ -168,6 +168,7 @@
 
     .caption_4 {
         line-height: 1.5em;
+        max-width: 9em;
     }
 
     .total-count {
@@ -179,4 +180,49 @@
         align-items: center;
         margin-top: 3em;
     } 
+}
+
+@media screen and (max-width: 767px) {
+    .item {
+        width: 100%;
+    }
+    
+    .item__image {
+        min-width: 190px;
+    }
+
+    .bag-filling {
+        padding: 0 1em;
+    }
+
+    .aside {
+        margin: 0;
+        height: 4em;
+    }
+
+    .delivery__text {
+        line-height: 1.5em;
+    }
+
+    .total-count {
+        margin-top: 2em;
+        flex-direction: column;
+    }
+
+    .empty-button {
+        order: 3;
+        margin-top: 2em;
+    }
+
+    .common-button {
+        order: 2;
+        margin-left: 0;
+        margin-top: 1em;
+    }
+    
+    .prices {
+        margin: 0;
+        align-self: center;
+    }
+
 }
