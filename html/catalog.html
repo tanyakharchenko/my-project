@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/catalog.css" />
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="/data/catalog-items.js" defer></script>
     <script src="/js/common.js" defer></script>
-    <script src="/lib/catalog.js" defer></script>
+    <script src="/js/catalog.js" defer></script>
 </head>
 
 <body>
@@ -26,8 +27,8 @@
                         <div class="bag">
                             <img src="/img/ico_bag.png" alt="bag-icon" class="icon bag__icon">
                             <span class="bag__text">Bag</span>
-                            <span class="bag__price"></span>
-                            <span class="bag__item-num">(0)</span>
+                            <span class="bag__price" id="bag-price"></span>
+                            <span class="bag__item-num" id="bag-num">(0)</span>
                         </div>
                     </a>
                     <button class="menu-icon" id="menu-icon">&#9776;</button>
@@ -161,179 +162,11 @@
                 </section>
             </div>
             <div class="wrapper">
-                <section class="catalog">
-                    <div class="items-catalog">
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item new">
-                                    <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">Only Skinny Jeans</h4>
-                                    <h5 class="caption caption_5">£65.50</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item new">
-                                    <img src="/img/item2.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">Neck Knitted Jumper</h4>
-                                    <h5 class="caption caption_5">£76.25</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="extra-off extra-off_mobile">
-                            <h2 class="caption caption_2">Last weekend <span class="text_red">extra 50%</span> off on
-                                all
-                                reduced boots and shoulder bags</h2>
-                            <h3 class="caption caption_3">This offer is valid in-store and online. Prices displayed
-                                reflect
-                                this additional discount. This offer ends at 11:59 GMT on March 1st 2019</h3>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item">
-                                    <img src="/img/item3.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">Turtle Neck Jumper in Rib</h4>
-                                    <h5 class="caption caption_5">£130.25</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="extra-off extra-off_tablet">
-                            <h2 class="caption caption_2">Last weekend <span class="text_red">extra 50%</span> off on
-                                all
-                                reduced boots and shoulder bags</h2>
-                            <h3 class="caption caption_3">This offer is valid in-store and online. Prices displayed
-                                reflect
-                                this additional discount. This offer ends at 11:59 GMT on March 1st 2019</h3>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item">
-                                    <img src="/img/item4.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">With Patchwork Crochet</h4>
-                                    <h5 class="caption caption_5">£80.60</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="extra-off">
-                            <h2 class="caption caption_2">Last weekend <span class="text_red">extra 50%</span> off on
-                                all
-                                reduced boots and shoulder bags</h2>
-                            <h3 class="caption caption_3">This offer is valid in-store and online. Prices displayed
-                                reflect
-                                this additional discount. This offer ends at 11:59 GMT on March 1st 2019</h3>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item new">
-                                    <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">Only Skinny Jeans</h4>
-                                    <h5 class="caption caption_5">£65.50</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item new">
-                                    <img src="/img/item2.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">Neck Knitted Jumper</h4>
-                                    <h5 class="caption caption_5">£76.25</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item">
-                                    <img src="/img/item3.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">Turtle Neck Jumper in Rib</h4>
-                                    <h5 class="caption caption_5">£130.25</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item">
-                                    <img src="/img/item4.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">With Patchwork Crochet</h4>
-                                    <h5 class="caption caption_5">£80.60</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item new">
-                                    <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">Only Skinny Jeans</h4>
-                                    <h5 class="caption caption_5">£65.50</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item new">
-                                    <img src="/img/item2.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">Neck Knitted Jumper</h4>
-                                    <h5 class="caption caption_5">£76.25</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item">
-                                    <img src="/img/item3.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">Turtle Neck Jumper in Rib</h4>
-                                    <h5 class="caption caption_5">£130.25</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="items-catalog__item">
-                            <a href="/html/item.html" class="link link_item">
-                                <div class="item">
-                                    <img src="/img/item4.jpg" alt="catalog-image" class="img img_item">
-                                    <div class="item_hover">
-                                        <p class="text_view-item">View item</p>
-                                    </div>
-                                    <h4 class="caption caption_4">With Patchwork Crochet</h4>
-                                    <h5 class="caption caption_5">£80.60</h5>
-                                </div>
-                            </a>
-                        </div>
+                <section class="catalog" id="catalog">
+                    <div class="items-catalog" id="items-catalog">
                     </div>
-                    <button class="common-button">Show more</button>
                 </section>
+                <button class="common-button" id="show-more-button">Show more</button>
             </div>
         </main>
         <aside class="aside">

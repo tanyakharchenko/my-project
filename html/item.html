@@ -9,11 +9,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/item.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-        crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="/data/catalog-items.js" defer></script>
     <script src="/js/common.js" defer></script>
-    <script src="/lib/item.js" defer></script>
+    <script src="/js/item.js" defer></script>
 </head>
 
 <body>
@@ -28,8 +26,8 @@
                         <div class="bag">
                             <img src="/img/ico_bag.png" alt="bag-icon" class="icon bag__icon">
                             <span class="bag__text">Bag</span>
-                            <span class="bag__price"></span>
-                            <span class="bag__item-num">(0)</span>
+                            <span class="bag__price" id="bag-price"></span>
+                            <span class="bag__item-num" id="bag-num">(0)</span>
                         </div>
                     </a>
                     <button class="menu-icon" id="menu-icon">&#9776;</button>
@@ -74,13 +72,13 @@
             <div class="wrapper">
                 <section class="back-block">
                     <a href="/html/catalog.html" class="link link_back-block link_header">
-                        <i class="fas fa-angle-left"></i>
+                        <img src="/img/angle-left-solid.svg" alt="arrow back to catalog" class="img icon_back">
                         <p class="back-block__text">Back to catalog</p>
                     </a>
                 </section>
             </div>
             <div class="wrapper">
-                <section class="item-characters">
+                <section class="item-characters" id='item-characters'>
                     <div class="item-photo">
                         <div class="item-photo_main">
                             <img src="/img/item-full.jpg" alt="item image" class="img item-photo_full">
@@ -98,26 +96,27 @@
                                 pick-stitch
                                 edging, cascade buttons at
                                 the cuffs <span class="caption_hide">and a subtle stripe pattern throughout</span></h3>
-                            <h5 class="caption caption_5 item-price">£180.60</h5>
+                            <h5 class="caption caption_5">£180.60</h5>
                         </div>
-                        <div class="parameters">
+                        <form class="parameters" id="form">
                             <div class="parameter parameter_size">
                                 <p class="parameter__text">Size</p>
-                                <ul class="parameter-list">
-                                    <li class="parameter-list__item">UK 52</li>
-                                    <li class="parameter-list__item">UK 54</li>
-                                    <li class="parameter-list__item">UK 56</li>
-                                </ul>
+                                <input type="radio" id="size_UK52" class="parameters__input" name="size">
+                                <label for="size_UK52" class="parameters__label">UK 52</label>
+                                <input type="radio" id="size_UK54" class="parameters__input" name="size">
+                                <label for="size_UK54" class="parameters__label">UK 54</label>
+                                <input type="radio" id="size_UK56" class="parameters__input" name="size">
+                                <label for="size_UK56" class="parameters__label">UK 56</label>
                             </div>
                             <div class="parameter parameter_color">
                                 <p class="parameter__text">Color</p>
-                                <ul class="parameter-list">
-                                    <li class="parameter-list__item">Black</li>
-                                    <li class="parameter-list__item">Blue</li>
-                                </ul>
+                                <input type="radio" id="color_black" class="parameters__input" name="color">
+                                <label for="color_black" class="parameters__label">Black</label>
+                                <input type="radio" id="color_blue" class="parameters__input" name="color">
+                                <label for="color_blue" class="parameters__label">Blue</label>
                             </div>
-                        </div>
-                        <button class="common-button">Add to bag</button>
+                            <input type="submit" value="Add to bag" class="common-button" id="add-to-bag-button">
+                        </form>
                     </div>
                 </section>
         </main>

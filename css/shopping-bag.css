@@ -23,6 +23,8 @@
 
 .item {
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     margin-bottom: 0;
     width: 50%;
 }

@@ -118,8 +118,9 @@
     align-self: center;
 }
 
-.add-button {
-    
+.add-button_tablet {
+    margin: 4em auto 0;
+    display: none;
 }
 
 .new-arrivals {
@@ -154,6 +155,14 @@
     .items-catalog__item:last-child {
         display: none;
     } 
+
+    .add-button_tablet {
+        display: block;
+    }
+
+    .add-button_desktop {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -240,5 +249,9 @@
 
     .oder-and-question_down {
         margin-top: 0;
+    }
+
+    .add-button_tablet {
+        margin: 0 auto 0;
     }
 }

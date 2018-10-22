@@ -39,10 +39,13 @@
 .item-photo_full {
     width: 590px;
     height: 394px;
+    min-width: 500px;
 }
 
 .item-photo_thumb {
     margin: 0;
+    max-width: 197px;
+    max-height: 130px;
 }
 
 .item-parameters {
@@ -99,7 +102,15 @@
     margin-left: 3em;
 }
 
-.parameter-list__item {
+.parameters__input {
+    display: none;
+}
+
+.parameters__input:checked + .parameters__label {
+    border: 0.1em solid #e5e5e5;
+}
+
+.parameters__label {
     width: 5em;
     height: 3em;
     display: flex;
@@ -108,7 +119,11 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 0.875em;
-    margin-right: 2.7em;
+    margin-left: 2em;
+}
+
+.parameters__label:hover {
+    border: 0.1em solid #e5e5e5;
 }
 
 .caption-order {
@@ -116,7 +131,7 @@
     flex-direction: column;
 }
 
-.parameter-list__item:last-child {
+.parameters__label:last-child {
     margin-right: 0;
 }
 
@@ -126,6 +141,11 @@
 
 .main {
     margin-bottom: 6em;
+}
+
+.icon_back {
+    width: 20px;
+    height: 20px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -141,6 +161,14 @@
     .item-photo {
         display: flex;  
         margin: 0 2em;
+    }
+
+    .item-photo_full {
+        height: auto;
+    }
+
+    .item-photo_thumb {
+        height: auto;
     }
 
     .item-photo_secondary {
@@ -180,6 +208,14 @@
         display: inline;
     }
 
+    .icon_back {
+        width: 20px;
+    }
+
+    .item-photo_main {
+        height: auto;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -194,6 +230,7 @@
 
     .item-photo_full {
         height: auto;
+        min-width: auto;
     }
 
     .item-parameters {
@@ -206,6 +243,8 @@
 
     .item-characters {
         margin: 1em auto;
+        flex-direction: column;
+        align-items: center;
     }
 
     .caption_3 {
@@ -213,15 +252,12 @@
         font-size: 0.87em;
     }
 
+    .caption_2 {
+        text-align: center;
+    }
+
     .parameters {
         align-items: flex-start;
     } 
-    
-    .parameter-list__item {
-        margin-right: 1em;
-    }
 
-    .common-button {
-        width: 60%;
-    }
 }

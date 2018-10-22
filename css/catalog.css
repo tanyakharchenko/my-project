@@ -60,6 +60,11 @@
     display: flex;
 }
 
+.catalog {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
 .items-catalog {
     z-index: 1;
     margin-top: 1em;

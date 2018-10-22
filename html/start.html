@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/start.css" />
     <script src="/js/common.js" defer></script>
-    <script src="/lib/start.js" defer></script>
+    <script src="/js/start.js" defer></script>
 </head>
 
 <body>
@@ -25,8 +25,8 @@
                         <div class="bag">
                             <img src="/img/ico_bag.png" alt="bag-icon" class="icon bag__icon">
                             <span class="bag__text">Bag</span>
-                            <span class="bag__price"></span>
-                            <span class="bag__item-num">(0)</span>
+                            <span class="bag__price" id="bag-price"></span>
+                            <span class="bag__item-num" id="bag-num">(0)</span>
                         </div>
                     </a>
                     <button class="menu-icon" id="menu-icon">&#9776;</button>
@@ -95,7 +95,7 @@
                                     <img src="/img/up.png" alt="button-up">
                                 </button>
                                 <a href="/html/item.html" class="link link_item">
-                                    <div class="item new">
+                                    <div class="item new-true">
                                         <div class="item_hover">
                                             <p class="text_view-item">View item</p>
                                         </div>
@@ -140,11 +140,11 @@
                                 <i class="new-price">£146.00</i>
                             </div>
                             <a href="/html/shopping-bag.html" class="link link_common-button">
-                                <button class="common-button add-button">Add to bag </button>
+                                <button class="common-button add-button add-button_desktop">Add to bag </button>
                             </a>
                         </div>
                     </div>
-                    <button class="common-button add-button add-button_tablet none">Add to bag
+                    <button class="common-button add-button add-button_tablet">Add to bag
                     </button>
                 </section>
             </div>
@@ -154,7 +154,7 @@
                     <div class="items-catalog">
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
-                                <div class="item new">
+                                <div class="item new-true">
                                     <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
@@ -166,7 +166,7 @@
                         </div>
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
-                                <div class="item new">
+                                <div class="item new-true">
                                     <img src="/img/item2.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
