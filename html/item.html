@@ -18,8 +18,10 @@
     <div class="content-wrapper">
         <header class="header size">
             <div class="header__up">
-                <h1 class="logo logo_desktop">Template</h1>
-                <h1 class="logo logo_mobile">TL</h1>
+                <a href="/html/start.html" class="link link_header">
+                    <h1 class="logo logo_desktop">Template</h1>
+                    <h1 class="logo logo_mobile">TL</h1>
+                </a>
                 <a href="#" class="link link_sing-up link_header">E-mail sing up</a>
                 <div class="bag-menu-block">
                     <a href="/html/shopping-bag.html" class="link link_header">
@@ -64,7 +66,11 @@
                 </nav>
                 <div class="search">
                     <input type="text" class="search__input" placeholder="Style Name">
-                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon">
+                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon" id="search-icon">
+                </div>
+                <div class="search search_tablet" id="search-tablet">
+                    <input type="text" class="search__input none" id="search-input-tablet" placeholder="Style Name">
+                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon" id="search-icon">
                 </div>
             </div>
         </header>
@@ -79,45 +85,7 @@
             </div>
             <div class="wrapper">
                 <section class="item-characters" id='item-characters'>
-                    <div class="item-photo">
-                        <div class="item-photo_main">
-                            <img src="/img/item-full.jpg" alt="item image" class="img item-photo_full">
-                        </div>
-                        <div class="item-photo_secondary">
-                            <img src="/img/thumb_0.jpg" alt="item image" class="img item-photo_thumb">
-                            <img src="/img/thumb_1.jpg" alt="item image" class="img item-photo_thumb">
-                            <img src="/img/thumb_2.jpg" alt="item image" class="img item-photo_thumb">
-                        </div>
-                    </div>
-                    <div class="item-parameters">
-                        <h2 class="caption caption_2">Dark classic fit suit</h2>
-                        <div class="caption-order">
-                            <h3 class="caption caption_3">Featuring fine Italian wool, this elegant suit has
-                                pick-stitch
-                                edging, cascade buttons at
-                                the cuffs <span class="caption_hide">and a subtle stripe pattern throughout</span></h3>
-                            <h5 class="caption caption_5">£180.60</h5>
-                        </div>
-                        <form class="parameters" id="form">
-                            <div class="parameter parameter_size">
-                                <p class="parameter__text">Size</p>
-                                <input type="radio" id="size_UK52" class="parameters__input" name="size">
-                                <label for="size_UK52" class="parameters__label">UK 52</label>
-                                <input type="radio" id="size_UK54" class="parameters__input" name="size">
-                                <label for="size_UK54" class="parameters__label">UK 54</label>
-                                <input type="radio" id="size_UK56" class="parameters__input" name="size">
-                                <label for="size_UK56" class="parameters__label">UK 56</label>
-                            </div>
-                            <div class="parameter parameter_color">
-                                <p class="parameter__text">Color</p>
-                                <input type="radio" id="color_black" class="parameters__input" name="color">
-                                <label for="color_black" class="parameters__label">Black</label>
-                                <input type="radio" id="color_blue" class="parameters__input" name="color">
-                                <label for="color_blue" class="parameters__label">Blue</label>
-                            </div>
-                            <input type="submit" value="Add to bag" class="common-button" id="add-to-bag-button">
-                        </form>
-                    </div>
+
                 </section>
         </main>
         <aside class="aside">

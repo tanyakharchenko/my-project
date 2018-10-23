@@ -3,6 +3,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 const bagPrice = document.getElementById('bag-price');
 const bagNum = document.getElementById('bag-num');
 
+
 let shoppingBag = {};
 
 const states = {
@@ -32,12 +33,26 @@ const checkShoppingBag = () => {
         itemsCnt += shoppingBag[key];
 
         let currentItem = JSON.parse(key);
-        itemsPrice = currentItem.price * itemsCnt;
+        if (currentItem.discountedPrice) {
+            currentItem.price = currentItem.discountedPrice;
+        }
+
+        itemsPrice += currentItem.price * shoppingBag[key];
     }
 
     bagNum.innerHTML = '(' + itemsCnt + ')';
-    bagPrice.innerHTML = '£' + itemsPrice;
+    bagPrice.innerHTML = '£' + itemsPrice.toFixed(2);
 }
+
+const searchBlock = document.getElementById('search-tablet');
+const inputSearch = document.getElementById('search-input-tablet');
+
+
+const showSearchInput = () => {
+    inputSearch.classList.toggle('none');
+    searchBlock.classList.toggle('search-width');
+}
+
 
 const chooseFunction = () => {
     if (event.target.id == 'menu-icon') {
@@ -52,12 +67,40 @@ const chooseFunction = () => {
     if (event.target.id == 'show-more-button') {
         showMore(event.target);
     }
-    if (event.target.classList.contains('item')) {
-        localStorage.setItem('id', event.target.id);
+    if (event.target.parentNode.hasAttribute('data-item')) {
+        localStorage.setItem('id', event.target.parentNode.id);
     }
 
     if (event.target.classList.contains('parameters__input')) {
         changeRadioState(event.target);
+    }
+
+    if (event.target.id == 'plus-button') {
+        states.plus = true;
+        states.minus = false;
+        changeItemNum(catchCurrentItem(event.target.parentNode.parentNode.parentNode));
+    }
+
+    if (event.target.id == 'minus-button') {
+        states.minus = true;
+        states.plus = false;
+        changeItemNum(catchCurrentItem(event.target.parentNode.parentNode.parentNode));
+    }
+
+    if (event.target.id == 'remove-button') {
+        removeItem(catchCurrentItem(event.target.parentNode.parentNode));
+    }
+
+    if (event.target.id == 'empty-bag') {
+        cleenBag(event.target.id);
+    }
+
+    if (event.target.id == 'checkout') {
+        buyItems();
+    }
+
+    if (event.target.id == 'search-icon') {
+        showSearchInput();
     }
 }
 

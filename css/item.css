@@ -46,6 +46,16 @@
     margin: 0;
     max-width: 197px;
     max-height: 130px;
+    cursor: pointer;
+    position: relative;
+}
+
+.thumb-hover {
+    position: absolute;
+    z-index: 2;
+    min-height: 130px;
+    min-width: 197px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .item-parameters {
@@ -135,8 +145,12 @@
     margin-right: 0;
 }
 
+.parameter_color {
+    margin-bottom: 4em;
+}
+
 .common-button {
-    margin: 2.5em auto 0;
+    margin: 0 auto;
 }
 
 .main {

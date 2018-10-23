@@ -120,8 +120,6 @@
 .prices {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
-    margin-top: 2em;
     align-items: flex-end;
 }
 
@@ -155,6 +153,11 @@
     font-size: 1.375em;
 }
 
+.empty-text {
+    text-align: center;
+    margin: 5em 0;
+}
+
 @media screen and (max-width: 1023px) {
     .caption-block {
         padding: 1em 2em; 
@@ -180,7 +183,6 @@
 
     .prices {
         align-items: center;
-        margin-top: 3em;
     } 
 }
 

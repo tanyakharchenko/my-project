@@ -11,15 +11,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/shopping-bag.css" />
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
     <script src="/js/common.js" defer></script>
-    <script src="/lib/shopping-bag.js" defer></script>
+    <script src="/js/shopping-bag.js" defer></script>
 </head>
 
 <body>
     <div class="content-wrapper">
         <header class="header size">
             <div class="header__up">
-                <h1 class="logo logo_desktop">Template</h1>
-                <h1 class="logo logo_mobile">TL</h1>
+                <a href="/html/start.html" class="link link_header">
+                    <h1 class="logo logo_desktop">Template</h1>
+                    <h1 class="logo logo_mobile">TL</h1>
+                </a>
                 <a href="#" class="link link_sing-up link_header">E-mail sing up</a>
                 <div class="bag-menu-block">
                     <a href="/html/shopping-bag.html" class="link link_header">
@@ -64,7 +66,11 @@
                 </nav>
                 <div class="search">
                     <input type="text" class="search__input" placeholder="Style Name">
-                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon">
+                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon" id="search-icon">
+                </div>
+                <div class="search search_tablet" id="search-tablet">
+                    <input type="text" class="search__input none" id="search-input-tablet" placeholder="Style Name">
+                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon" id="search-icon">
                 </div>
             </div>
         </header>
@@ -74,133 +80,14 @@
                     <h2 class="caption caption_2">Shopping bag</h2>
                 </div>
             </div>
-            <div class="wrapper">
-                <section class="bag-filling">
-                    <div class="item new">
-                        <a href="/html/item.html" class="link link_item">
-                            <div class="item__image">
-                                <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
-                                <div class="item_hover">
-                                    <p class="text_view-item">View item</p>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="item__parameters">
-                            <a href="/html/item.html" class="link link_item">
-                                <h4 class="caption caption_4">Only Skinny Jeans Bla Bla Bla BLA BLa</h4>
-                            </a>
-                            <h5 class="caption caption_5">£65.50</h5>
-                            <div class="item-parameter item-parameter_color">
-                                <p class="item-parameter__name">Color: </p>
-                                <p class="item-parameter__value">Phillipa wash</p>
-                            </div>
-                            <div class="item-parameter item-parameter_size">
-                                <p class="item-parameter__name">Size: </p>
-                                <p class="item-parameter__value">UK 17</p>
-                            </div>
-                            <div class="item-parameter item-parameter_quantity">
-                                <p class="item-parameter__name">Quantity: </p>
-                                <button class="item__button">-</button>
-                                <p class="quantity-counter">1</p>
-                                <button class="item__button">+</button>
-                            </div>
-                            <button class="item__button item__button_remove">Remove item</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a href="/html/item.html" class="link link_item">
-                            <div class="item__image">
-                                <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
-                                <div class="item_hover">
-                                    <p class="text_view-item">View item</p>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="item__parameters">
-                            <a href="/html/item.html" class="link link_item">
-                                <h4 class="caption caption_4">Only Skinny Jeans</h4>
-                            </a>
-                            <h5 class="caption caption_5">£65.50</h5>
-                            <div class="item-parameter item-parameter_color">
-                                <p class="item-parameter__name">Color: </p>
-                                <p class="item-parameter__value">Phillipa wash</p>
-                            </div>
-                            <div class="item-parameter item-parameter_size">
-                                <p class="item-parameter__name">Size: </p>
-                                <p class="item-parameter__value">UK 17</p>
-                            </div>
-                            <div class="item-parameter item-parameter_quantity">
-                                <p class="item-parameter__name">Quantity: </p>
-                                <button class="item__button">-</button>
-                                <p class="quantity-counter">1</p>
-                                <button class="item__button">+</button>
-                            </div>
-                            <button class="item__button item__button_remove">Remove item</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a href="/html/item.html" class="link link_item">
-                            <div class="item__image">
-                                <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
-                                <div class="item_hover">
-                                    <p class="text_view-item">View item</p>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="item__parameters">
-                            <a href="/html/item.html" class="link link_item">
-                                <h4 class="caption caption_4">Only Skinny Jeans</h4>
-                            </a>
-                            <h5 class="caption caption_5">£65.50</h5>
-                            <div class="item-parameter item-parameter_color">
-                                <p class="item-parameter__name">Color: </p>
-                                <p class="item-parameter__value">Phillipa wash</p>
-                            </div>
-                            <div class="item-parameter item-parameter_size">
-                                <p class="item-parameter__name">Size: </p>
-                                <p class="item-parameter__value">UK 17</p>
-                            </div>
-                            <div class="item-parameter item-parameter_quantity">
-                                <p class="item-parameter__name">Quantity: </p>
-                                <button class="item__button">-</button>
-                                <p class="quantity-counter">1</p>
-                                <button class="item__button">+</button>
-                            </div>
-                            <button class="item__button item__button_remove">Remove item</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a href="/html/item.html" class="link link_item">
-                            <div class="item__image">
-                                <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
-                                <div class="item_hover">
-                                    <p class="text_view-item">View item</p>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="item__parameters">
-                            <a href="/html/item.html" class="link link_item">
-                                <h4 class="caption caption_4">Only Skinny Jeans</h4>
-                            </a>
-                            <h5 class="caption caption_5">£65.50</h5>
-                            <div class="item-parameter item-parameter_color">
-                                <p class="item-parameter__name">Color: </p>
-                                <p class="item-parameter__value">Phillipa wash</p>
-                            </div>
-                            <div class="item-parameter item-parameter_size">
-                                <p class="item-parameter__name">Size: </p>
-                                <p class="item-parameter__value">UK 17</p>
-                            </div>
-                            <div class="item-parameter item-parameter_quantity">
-                                <p class="item-parameter__name">Quantity: </p>
-                                <button class="item__button">-</button>
-                                <p class="quantity-counter">1</p>
-                                <button class="item__button">+</button>
-                            </div>
-                            <button class="item__button item__button_remove">Remove item</button>
-                        </div>
-                    </div>
+            <div class="wrapper" id="bag-wrapper">
+                <section class="bag-filling" id="bag-filling">
+
                 </section>
+                <h2 class="empty-text caption_2" id="empty-text">Your shopping bag is empty. Use Catalog to add new
+                    items</h2>
+                <h2 class="empty-text caption_2 none" id="checkout-text">Thank you for your purchase.</h2>
+            </div>
         </main>
         <div class="wrapper">
             <aside class="aside">
@@ -212,11 +99,11 @@
         </aside>
         <main class="main">
             <section class="total-count">
-                <button class="empty-button">Empty bag</button>
-                <button class="common-button">Checkout</button>
+                <button class="empty-button" id="empty-bag">Empty bag</button>
+                <button class="common-button" id="checkout">Checkout</button>
                 <div class="prices">
-                    <p class="discount">Applied discount: <span class="discount_num">£15.00</span></p>
-                    <p class="price">Total price: <span class="price_num">£236.50</span></p>
+                    <p class="discount none">Applied discount: <span class="discount_num">£15.00</span></p>
+                    <p class="price">Total price: <span class="price_num" id="total-price-num">£236.50</span></p>
                 </div>
             </section>
         </main>
@@ -270,6 +157,7 @@
                             </div>
                         </div>
                     </section>
+                    <div class="wrapper wrapper_mobile"></div>
                     <section class="oder-and-question">
                         <div class="oder-and-question_up">
                             <div class="questions">
@@ -286,12 +174,21 @@
                         </div>
                         <div class="oder-and-question_down">
                             <div class="delivery-info">
-                                <p class="delivery-info__text">We have our own delivery service which operates in 23
+                                <p class="delivery-info__text">We have our own delivery service which operates in
+                                    23
                                     major
                                     European
                                     cities. Delivery time - 3-5 days.</p>
                             </div>
-                            <div class="social-links">
+                        </div>
+                        <div class="wrapper wrapper_mobile"></div>
+                        <div class="social-links">
+                            <div class="footer-bottom__links footer-bottom__links_mobile">
+                                <a href="#" class="link footer-bottom__links_link link_footer">Legal notice</a>
+                                <a href="#" class="link footer-bottom__links_link link_footer">Privacy policy</a>
+                                <a href="#" class="link footer-bottom__links_link link_footer">Site map</a>
+                            </div>
+                            <div class="social-links-wrapper">
                                 <a href="#" class="link link_social">
                                     <img src="/img/fb.png" alt="facebook-icon" class="icon">
                                 </a>

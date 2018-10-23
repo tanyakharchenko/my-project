@@ -1,8 +1,11 @@
-const createItem = ({ id, title, price, thumbnail, hasNew }) => {
+const createItem = ({ id, title, price, discountedPrice, thumbnail, hasNew }) => {
+    if (discountedPrice) {
+        price = discountedPrice;
+    }
     return `
     <div class="items-catalog__item">
     <a href="/html/item.html" class="link link_item">
-        <div class="item new-${hasNew}" id="${id}">
+        <div class="item new-${hasNew}" id="${id}" data-item="true">
             <img src="${thumbnail}" alt="catalog-image" class="img img_item">
             <div class="item_hover">
                 <p class="text_view-item">View item</p>
@@ -66,10 +69,5 @@ const showMore = (button) => {
     }
     button.classList.add('none');
 }
-
-const saveId = () => {
-
-}
-
 
 catalogWrapper.appendChild(itemsCatalog);

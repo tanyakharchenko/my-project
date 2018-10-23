@@ -81,7 +81,7 @@ window.catalog = [{
     colors: [],
     sizes: [],
     thumbnail: '/img/catalog/crochet.jpg',
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    preview: ['/img/items/dark-suit1.jpg', '/img/items/dark-suit2.jpg', '/img/items/dark-suit3.jpg'] // replace with paths to images extracted from item layout
 }, {
     id: '80d32566-d81c-4ba0-9edf-0eceda3b4360',
     dateAdded: '2017-01-01T13:26:14.000Z',
@@ -109,7 +109,7 @@ window.catalog = [{
     colors: ['Green'],
     sizes: ['UK 19'],
     thumbnail: '/img/catalog/knitted-jumper.jpg',
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    preview: ['/img/items/dark-suit1.jpg', '/img/items/dark-suit2.jpg', '/img/items/dark-suit3.jpg'] // replace with paths to images extracted from item layout
 }, {
     id: '8c061815-6a7d-4465-bb78-1bdc6c5adebf',
     dateAdded: '2017-08-28T09:15:36.000Z',
@@ -123,7 +123,7 @@ window.catalog = [{
     colors: ['Phillipa wash'],
     sizes: ['UK 17'],
     thumbnail: '/img/catalog/skinny-jeans.jpg',
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    preview: ['/img/items/dark-suit1.jpg', '/img/items/dark-suit2.jpg', '/img/items/dark-suit3.jpg'] // replace with paths to images extracted from item layout
 }, {
     id: '9ded7821-e510-4a16-ba9f-57c1e3442ad8',
     dateAdded: '2017-07-19T15:11:04.000Z',
@@ -137,7 +137,7 @@ window.catalog = [{
     colors: [],
     sizes: [],
     thumbnail: '/img/catalog/turtle-jumper.jpg',
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    preview: ['/img/items/dark-suit1.jpg', '/img/items/dark-suit2.jpg', '/img/items/dark-suit3.jpg'] // replace with paths to images extracted from item layout
 }, {
     id: 'bec71daa-d133-473d-bbb0-1ee0a427a17d',
     dateAdded: '2017-03-09T17:51:45.000Z',
@@ -151,7 +151,7 @@ window.catalog = [{
     colors: ['Dark Blue'],
     sizes: ['UK 19'],
     thumbnail: '/img/catalog/busted-jean.jpg',
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    preview: ['/img/items/dark-suit1.jpg', '/img/items/dark-suit2.jpg', '/img/items/dark-suit3.jpg'] // replace with paths to images extracted from item layout
 }, {
     id: 'ccc8a5d5-7cdf-4706-95f2-abc64761400d',
     dateAdded: '2017-06-09T17:32:17.000Z',
@@ -165,7 +165,7 @@ window.catalog = [{
     colors: [],
     sizes: [],
     thumbnail: '/img/catalog/colour-block.jpg',
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    preview: ['/img/items/dark-suit1.jpg', '/img/items/dark-suit2.jpg', '/img/items/dark-suit3.jpg'] // replace with paths to images extracted from item layout
 }, {
     id: 'e50a3153-7833-4b85-b412-1a39d215fd38',
     dateAdded: '2017-04-25T12:14:41.000Z',
@@ -179,7 +179,7 @@ window.catalog = [{
     colors: ['Raw umber', 'Dark blue'],
     sizes: ['UK 18', 'UK 19'],
     thumbnail: '/img/catalog/oversized-cardigan.jpg',
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    preview: ['/img/items/dark-suit1.jpg', '/img/items/dark-suit2.jpg', '/img/items/dark-suit3.jpg'] // replace with paths to images extracted from item layout
 }, {
     id: 'ff665110-5e7f-435d-b1b4-651c3d5050ca',
     dateAdded: '2017-04-05T10:04:16.000Z',
@@ -193,5 +193,19 @@ window.catalog = [{
     colors: ['Blue'],
     sizes: ['UK 18'],
     thumbnail: '/img/catalog/neon-jumper.jpg',
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    preview: ['/img/items/dark-suit1.jpg', '/img/items/dark-suit2.jpg', '/img/items/dark-suit3.jpg'] // replace with paths to images extracted from item layout
+}, {
+    id: 'er3215110-2q3y-123d-ddb4-651c3d0203ni',
+    dateAdded: '2017-06-02T10:04:16.000Z',
+    title: 'Nike Red',
+    description: '',
+    discountedPrice: 110.10,
+    price: 150.10,
+    hasNew: false,
+    category: 'women',
+    fashion: 'Sport',
+    colors: ['Red'],
+    sizes: ['UK 18', 'UK 19'],
+    thumbnail: '/img/catalog/nike.jpg',
+    preview: ['/img/items/nike1.jpg', '/img/items/nike2.jpg', '/img/items/nike3.jpg'] // replace with paths to images extracted from item layout
 }];

@@ -17,8 +17,10 @@
     <div class="content-wrapper">
         <header class="header size">
             <div class="header__up">
-                <h1 class="logo logo_desktop">Template</h1>
-                <h1 class="logo logo_mobile">TL</h1>
+                <a href="/html/start.html" class="link link_header">
+                    <h1 class="logo logo_desktop">Template</h1>
+                    <h1 class="logo logo_mobile">TL</h1>
+                </a>
                 <a href="#" class="link link_sing-up link_header">E-mail sing up</a>
                 <div class="bag-menu-block">
                     <a href="/html/shopping-bag.html" class="link link_header">
@@ -63,7 +65,11 @@
                 </nav>
                 <div class="search">
                     <input type="text" class="search__input" placeholder="Style Name">
-                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon">
+                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon" id="search-icon">
+                </div>
+                <div class="search search_tablet" id="search-tablet">
+                    <input type="text" class="search__input none" id="search-input-tablet" placeholder="Style Name">
+                    <img src="/img/ico-search.png" alt="search-icon" class="icon search__icon" id="search-icon">
                 </div>
             </div>
         </header>
@@ -71,7 +77,7 @@
             <div class="wrapper">
                 <section class="banners">
                     <a href="/html/item.html" class="link link_banners">
-                        <div class="banners__left">
+                        <div class="banners__left" data-item="true" id="er3215110-2q3y-123d-ddb4-651c3d0203ni">
                             <img src="/img/left.jpg" alt="banner-img" class="img banners__left_image">
                         </div>
                     </a>
@@ -154,7 +160,7 @@
                     <div class="items-catalog">
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
-                                <div class="item new-true">
+                                <div class="item new-true" data-item="true" id="8c061815-6a7d-4465-bb78-1bdc6c5adebf">
                                     <img src="/img/item1.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
@@ -166,7 +172,7 @@
                         </div>
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
-                                <div class="item new-true">
+                                <div class="item new-true" data-item="true" id="8b300772-eee3-4ff1-b091-e89f17e0e469">
                                     <img src="/img/item2.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
@@ -178,7 +184,7 @@
                         </div>
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
-                                <div class="item">
+                                <div class="item" data-item="true" id="9ded7821-e510-4a16-ba9f-57c1e3442ad8">
                                     <img src="/img/item3.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
@@ -190,7 +196,7 @@
                         </div>
                         <div class="items-catalog__item">
                             <a href="/html/item.html" class="link link_item">
-                                <div class="item">
+                                <div class="item" data-item="true" id="739d3ae0-6dca-4453-a7a4-a94b841a296d">
                                     <img src="/img/item4.jpg" alt="catalog-image" class="img img_item">
                                     <div class="item_hover">
                                         <p class="text_view-item">View item</p>
