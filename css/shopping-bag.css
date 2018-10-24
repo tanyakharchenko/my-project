@@ -136,6 +136,14 @@
     font-size: 0.813em;
 }
 
+.empty-button:hover {
+    outline: 1px solid #f14a58;
+}
+
+.empty-button:active {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
 .discount {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
@@ -156,6 +164,14 @@
 .empty-text {
     text-align: center;
     margin: 5em 0;
+}
+
+.item__image {
+    position: relative;
+}
+
+.item_hover {
+    height: 100%;
 }
 
 @media screen and (max-width: 1023px) {

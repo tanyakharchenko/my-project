@@ -37,10 +37,10 @@
     max-width: 1180px;
 }
 
-.best-offer__left {
+.best-offer-items {
     display: flex;
-    justify-content: space-between;
-    width: 65%;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .best-offer__item-block {
@@ -135,6 +135,18 @@
     display: none;
 }
 
+.link_banners:hover {
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.link_banners:active {
+    box-shadow: 0 0 2px #f14a58;
+}
+
+.none-true {
+    display: none;
+}
+
 @media screen and (max-width: 1023px) {
     .menu {
         width: 90%;
@@ -144,7 +156,7 @@
         padding: 0 3em;
     }
 
-    .best-offer__left {
+    .best-offer-items {
         padding-left: 2em;
     }
 
@@ -162,6 +174,10 @@
 
     .add-button_desktop {
         display: none;
+    }
+
+    .link_common-button {
+        margin: 0 auto;
     }
 }
 
@@ -191,7 +207,7 @@
         display: block;
     }
 
-    .best-offer__left {
+    .best-offer-items {
         width: 100%;
         padding: 0 0.5em;
         margin: 0;

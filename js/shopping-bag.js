@@ -1,5 +1,5 @@
 let bagContains = [];
-for (item in shoppingBag) {
+for (let item in shoppingBag) {
     let parseItem = JSON.parse(item);
     parseItem.num = shoppingBag[item];
     bagContains.push(parseItem);
@@ -8,7 +8,6 @@ for (item in shoppingBag) {
 const createItem = ({ id, title, price, discountedPrice, thumbnail, hasNew, color, size, num }) => {
     if (discountedPrice) {
         price = discountedPrice;
-        console.log(discountedPrice);
     }
     return `
     <div class="item new-${hasNew}" id="${id}" data-color="${color}" data-size="${size}">
@@ -49,8 +48,11 @@ const bagFilling = document.getElementById('bag-filling');
 const wrapper = document.getElementById('bag-wrapper');
 const totalPriceNum = document.getElementById('total-price-num');
 const itemCounterCollection = document.getElementsByClassName('quantity-counter');
+
 const emptyText = document.getElementById('empty-text');
 const checkoutText = document.getElementById('checkout-text');
+
+const discountBlock = document.getElementById('discount-block');
 
 const drawsItems = (arr) => {
     bagFilling.innerHTML = '';
@@ -80,6 +82,18 @@ const catchCurrentItem = (elem) => {
     return current; //return the array
 }
 
+let drawDiscount = () => {
+    discountBlock.classList.remove('none');
+}
+
+let removeDiscount = () => {
+    discountBlock.classList.add('none');
+}
+
+if (states.discount) {
+    drawDiscount();
+}
+
 const changeItemNum = (arr) => { //array contains item (arr[0]) and it's position (arr[1])
     if (states.plus) {
         arr[0].num++;
@@ -91,7 +105,7 @@ const changeItemNum = (arr) => { //array contains item (arr[0]) and it's positio
         }
     }
     itemCounterCollection[arr[1]].innerHTML = arr[0].num;
-    for (item in shoppingBag) {
+    for (let item in shoppingBag) {
         let parseItem = JSON.parse(item);
         if (parseItem.id == arr[0].id
             && parseItem.color == arr[0].color
@@ -117,7 +131,7 @@ const changeItemNum = (arr) => { //array contains item (arr[0]) and it's positio
 const removeItem = (arr) => {
     bagContains.splice(arr[1], 1);
 
-    for (item in shoppingBag) { //remove from shopping bag
+    for (let item in shoppingBag) { //remove from shopping bag
         let parseItem = JSON.parse(item);
         if (parseItem.id == arr[0].id
             && parseItem.color == arr[0].color
@@ -128,6 +142,11 @@ const removeItem = (arr) => {
     let shoppingBagStr = JSON.stringify(shoppingBag);
     localStorage.setItem('bag', shoppingBagStr);
     checkShoppingBag();
+    if (states.discount) {
+        drawDiscount();
+    } else {
+        removeDiscount();
+    }
     if (bagContains.length == 0) {
         emptyText.classList.remove('none');
     }
@@ -157,3 +176,4 @@ const buyItems = () => {
     cleenBag();
     checkoutText.classList.remove('none');
 }
+

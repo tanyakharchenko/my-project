@@ -8,7 +8,10 @@ let shoppingBag = {};
 
 const states = {
     color: '',
-    size: ''
+    size: '',
+    left: false,
+    right: false,
+    discount: false
 }
 
 const showMobileMenu = () => {
@@ -22,17 +25,34 @@ const showMobileMenu = () => {
     }
 }
 
-const checkShoppingBag = () => {
+const checkShoppingBag = () => {  
+    states.left = false;
+    states.right = false;
+    states.discount = false;
+    
     if (localStorage.getItem('bag')) {
         shoppingBag = JSON.parse(localStorage.getItem('bag'));
     }
 
     let itemsPrice = 0;
     let itemsCnt = 0;
-    for (key in shoppingBag) {
+    for (let key in shoppingBag) {
         itemsCnt += shoppingBag[key];
 
         let currentItem = JSON.parse(key);
+
+        if (window.bestOffer.left.some(id => id === currentItem.id)) { //checked current item in best offer left block
+            states.left = true; 
+        }
+
+        if (window.bestOffer.right.some(id => id === currentItem.id)) {//checked current item in best offer right block
+            states.right = true;
+        }
+
+        if (states.left && states.right) { //if both of them present in the bag applied discount
+            states.discount = true;
+        }
+
         if (currentItem.discountedPrice) {
             currentItem.price = currentItem.discountedPrice;
         }
@@ -41,8 +61,12 @@ const checkShoppingBag = () => {
     }
 
     bagNum.innerHTML = '(' + itemsCnt + ')';
+    if (states.discount) {
+        itemsPrice -= window.bestOffer.discount;
+    }
     bagPrice.innerHTML = '£' + itemsPrice.toFixed(2);
 }
+
 
 const searchBlock = document.getElementById('search-tablet');
 const inputSearch = document.getElementById('search-input-tablet');
@@ -101,6 +125,10 @@ const chooseFunction = () => {
 
     if (event.target.id == 'search-icon') {
         showSearchInput();
+    }
+
+    if (event.target.hasAttribute('data-best-offer-add')) {
+        addToBagBestOffer();
     }
 }
 

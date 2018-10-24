@@ -6,9 +6,11 @@ const createItem = ({ id, title, price, discountedPrice, thumbnail, hasNew }) =>
     <div class="items-catalog__item">
     <a href="/html/item.html" class="link link_item">
         <div class="item new-${hasNew}" id="${id}" data-item="true">
+            <div class="item__image">
             <img src="${thumbnail}" alt="catalog-image" class="img img_item">
             <div class="item_hover">
                 <p class="text_view-item">View item</p>
+            </div>
             </div>
             <h4 class="caption caption_4">${title}</h4>
             <h5 class="caption caption_5">£${price}</h5>
@@ -63,7 +65,7 @@ extrasCollection.forEach((item, i) => {
 });
 
 const showMore = (button) => {
-    for (let i = 12; i < itemsCatalogCollection.length; i++) {
+    for (let i = 12; i < itemsCatalogCollection.length; i++) { //12 is number of items need to show
         itemsCatalogCollection[i].classList.remove('none');
         itemsCatalogCollection[i].classList.add('show-more-item');
     }

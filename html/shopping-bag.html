@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/shopping-bag.css" />
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="/data/best-offer.js"></script>
     <script src="/js/common.js" defer></script>
     <script src="/js/shopping-bag.js" defer></script>
 </head>
@@ -102,7 +102,7 @@
                 <button class="empty-button" id="empty-bag">Empty bag</button>
                 <button class="common-button" id="checkout">Checkout</button>
                 <div class="prices">
-                    <p class="discount none">Applied discount: <span class="discount_num">£15.00</span></p>
+                    <p class="discount none" id="discount-block">Applied discount: <span class="discount_num">£15.00</span></p>
                     <p class="price">Total price: <span class="price_num" id="total-price-num">£236.50</span></p>
                 </div>
             </section>

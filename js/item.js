@@ -22,12 +22,18 @@ const createItemCharacters = ({ title, price, discountedPrice, description, prev
                             id="third-photo">
                         </div>
                         <div class="item-photo_secondary">
+                            <div class="img-wrapper">
                             <img src="${preview[0]}" alt="item image" class="img item-photo_thumb" data-first="true">
                             <div class="thumb-hover" id="first-hover"></div>
+                            </div>
+                            <div class="img-wrapper">
                             <img src="${preview[1]}" alt="item image" class="img item-photo_thumb" data-second="true">
                             <div class="thumb-hover none" id="second-hover"></div>
+                            </div>
+                            <div class="img-wrapper">
                             <img src="${preview[2]}" alt="item image" class="img item-photo_thumb" data-third="true">
                             <div class="thumb-hover none" id="third-hover"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="item-parameters">
@@ -61,13 +67,14 @@ const createItemSize = (sizes) => {
     }
 
     else {
-        for (i = 0; i < sizes.length; i++) {
-            str += 
+        sizes.forEach((size) => {
+            str +=
+                `
+            <input type="radio" id="size_${size}" class="parameters__input" name="size" value="${size}">
+            <label for="size_${size}" class="parameters__label">${size}</label>
             `
-            <input type="radio" id="size_${sizes[i]}" class="parameters__input" name="size" value="${sizes[i]}">
-            <label for="size_${sizes[i]}" class="parameters__label">${sizes[i]}</label>
-            `
-        }
+        });
+
         return str;
     }
 }
@@ -79,16 +86,14 @@ const createItemColor = (colors) => {
         <input type="radio" id="color_No-color" class="parameters__input" name="color" value="Universal">
         <label for="color_No-color" class="parameters__label">Universal</label>
         `
-    }
-
-    else {
-        for (i = 0; i < colors.length; i++) {
-            str += 
+    } else {
+        colors.forEach((color) => {
+            str +=
             `
-            <input type="radio" id="color_${colors[i]}" class="parameters__input" name="color" value="${colors[i]}">
-            <label for="color_${colors[i]}" class="parameters__label">${colors[i]}</label>
+            <input type="radio" id="color_${color}" class="parameters__input" name="color" value="${color}">
+            <label for="color_${color}" class="parameters__label">${color}</label>
             `
-        }
+        })
         return str;
     }
 }
@@ -116,7 +121,7 @@ const addToBag = () => {
     } else {
         shoppingBag[currentItemStr] = 1;
     }
-    
+
     let shoppingBagStr = JSON.stringify(shoppingBag);
     localStorage.setItem('bag', shoppingBagStr);
     checkShoppingBag();

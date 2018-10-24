@@ -36,18 +36,6 @@
     display: block;
 }
 
-.item_hover {
-    position: absolute;
-    top: 0;
-    width: 240px;
-    height: 340px;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
 .text_view-item {
     color: #f14a58;
     font-family: 'Open Sans', sans-serif;
@@ -256,6 +244,21 @@
     align-items: center;
 }
 
+.item_hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 77%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
 .new-true {
     display: block;
 }
@@ -289,6 +292,10 @@
 .common-button:hover {
     color: #f14a58;
     border: 1px solid #f14a58;
+}
+
+.common-button:active {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .link_common-button {
@@ -588,10 +595,6 @@
     }
 
     .img_last {
-        display: none;
-    }
-
-    .link_item:hover .item_hover {
         display: none;
     }
 
