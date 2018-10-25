@@ -12,7 +12,7 @@ const createItem = ({ id, title, price, discountedPrice, thumbnail, hasNew, colo
     return `
     <div class="item new-${hasNew}" id="${id}" data-color="${color}" data-size="${size}">
                         <a href="/html/item.html" class="link link_item">
-                            <div class="item__image">
+                            <div class="item__image" data-item="true" id="${id}">
                                 <img src="${thumbnail}" alt="catalog-image" class="img img_item">
                                 <div class="item_hover">
                                     <p class="text_view-item">View item</p>

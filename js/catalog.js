@@ -6,7 +6,7 @@ const createItem = ({ id, title, price, discountedPrice, thumbnail, hasNew }) =>
     <div class="items-catalog__item">
     <a href="/html/item.html" class="link link_item">
         <div class="item new-${hasNew}" id="${id}" data-item="true">
-            <div class="item__image">
+            <div class="item__image" data-item="true" id="${id}">
             <img src="${thumbnail}" alt="catalog-image" class="img img_item">
             <div class="item_hover">
                 <p class="text_view-item">View item</p>
