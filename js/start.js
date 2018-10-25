@@ -121,8 +121,8 @@ const addToBagBestOffer = () => {
         }
     });
 
-    firstItem = items[0];
-    secondItem = items[1];
+    let firstItem = items[0];
+    let secondItem = items[1];
     firstItem.size = items[0].sizes[0];
     secondItem.size = items[1].sizes[0];
     firstItem.color = items[0].colors[0];

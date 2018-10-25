@@ -189,7 +189,7 @@ window.catalog = [{
     price: 19.75,
     hasNew: false,
     category: 'women',
-    fashion: 'Casual style',
+    fashion: 'New Look',
     colors: ['Blue'],
     sizes: ['UK 18'],
     thumbnail: '/img/catalog/neon-jumper.jpg',
@@ -208,4 +208,18 @@ window.catalog = [{
     sizes: ['UK 18', 'UK 19'],
     thumbnail: '/img/catalog/nike.jpg',
     preview: ['/img/items/nike1.jpg', '/img/items/nike2.jpg', '/img/items/nike3.jpg'] // replace with paths to images extracted from item layout
+}, {
+    id: 'qg0697965-3l4d-546y-lvf1-421l5y0104il',
+    dateAdded: '2017-02-02T10:04:16.000Z',
+    title: 'Blue Dress',
+    description: '',
+    discountedPrice: 110.15,
+    price: 150.15,
+    hasNew: false,
+    category: 'women',
+    fashion: 'Casual style',
+    colors: ['Blue'],
+    sizes: ['UK 18', 'UK 19'],
+    thumbnail: '/img/catalog/blue-dress.jpg',
+    preview: ['/img/items/dark-suit1.jpg', '/img/items/dark-suit2.jpg', '/img/items/dark-suit3.jpg'] // replace with paths to images extracted from item layout
 }];

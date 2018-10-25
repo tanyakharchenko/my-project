@@ -40,7 +40,7 @@
     font-size: 0.75em;
     background: white;
     width: 100%;
-    margin-top: 2.2em;
+    padding-top: 2.2em;
 }
 
 .drop-menu__item {
@@ -124,6 +124,46 @@
     display: none;
 }
 
+.text_smaller-size {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+.tablet-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #8b8888;
+}
+
+.tablet-filters__element {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.tablet-filter-caption {
+    color: black;
+    margin-bottom: 2em;
+}
+
+.tablet-filter {
+    list-style-type: circle;
+    margin-bottom: 2em;
+}
+
+.tablet-filter__item {
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.tablet-filter__item:hover {
+    color: #f14a58;
+}
+
+
 
 @media screen and (max-width: 1023px) {
     .arrow-down {
@@ -161,6 +201,14 @@
 
     .banners__left {
 
+    }
+
+    .filter-option {
+        display: none;
+    }
+
+    .text_smaller-size {
+        font-size: 1em;
     }
 }
 
