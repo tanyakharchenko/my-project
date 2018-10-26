@@ -1,3 +1,27 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(/fonts/Open_Sans/OpenSans-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/fonts/Open_Sans/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(/fonts/Roboto/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(/fonts/Roboto/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
 .wrapper {
     position: relative;
     border-top: 1px solid transparent;
@@ -93,16 +117,8 @@
     cursor: pointer;
 }
 
-.icon {
-
-}
-
 .bag__icon {
     margin-right: 1em;
-}
-
-.bag__text {
-
 }
 
 .header__down {
@@ -126,10 +142,6 @@
     justify-content: space-between;
 }
 
-.menu__list_item {
-
-}
-
 .search {
     cursor: pointer;
     position: relative;
@@ -147,10 +159,6 @@
     padding: 0;
 }
 
-.search__icon {
-
-}
-
 .link {
     text-decoration: none;
     color: black;
@@ -162,10 +170,6 @@
 
 .link_bag:hover .bag__text {
     color: #f14a58;
-}
-
-.link_banners:hover {
-
 }
 
 .link_sing-up {
@@ -340,14 +344,6 @@
     font-size: 0.88em;
 }
 
-.quick-links {
-
-}
-
-.customer-care{
-
-}
-
 .oder-and-question {
     display: flex;
     padding-top: 4em;
@@ -387,16 +383,11 @@
     font-weight: 700;
 }
 
-.order {
-
-}
-
 .oder-and-question_down {
     margin-top: 4.5em;
     width: 85%;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
 }
 
 .delivery-info {  
@@ -421,10 +412,6 @@
     display: flex;
     justify-content: space-between;
     margin: 1.5em 5em;
-}
-
-.rights {
-
 }
 
 .rights__text {
@@ -490,10 +477,6 @@
     margin: 0 auto;
 }
 
-.banners__left {
-
-}
-
 .banners__right {
     display: flex;
 }
@@ -517,9 +500,6 @@
 
 .social-links-wrapper {
     display: flex;
-}
-
-.show-more-item {
 }
 
 .search_tablet {

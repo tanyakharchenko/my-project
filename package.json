@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel js -d lib",
-    "watch-start": "browser-sync start --server -w --index html/start.html",
+    "watch": "browser-sync start --server -w --index html/start.html",
     "watch-catalog": "browser-sync start --server -w --index html/catalog.html",
     "watch-item": "browser-sync start --server -w --index html/item.html",
     "watch-bag": "browser-sync start --server -w --index html/shopping-bag.html"

@@ -74,7 +74,6 @@ const drawItems = (catalog) => {
 const showMore = (button) => {
     for (let i = 12; i < itemsCatalogCollection.length; i++) { //12 is number of items need to show
         itemsCatalogCollection[i].classList.remove('none');
-        itemsCatalogCollection[i].classList.add('show-more-item');
     }
     button.classList.add('none');
 }
@@ -195,7 +194,7 @@ const menArr = window.catalog.filter((item) => {
 
 let headerLinkCollection = document.getElementsByClassName('link_header');
 headerLinkCollection = Array.prototype.slice.call(headerLinkCollection);
-menWomenLinksDesktop = headerLinkCollection.splice(11, 2) //get only "men" and "women" desktop links
+const menWomenLinksDesktop = headerLinkCollection.splice(11, 2) //get only "men" and "women" desktop links
 
 
 const filterMenWomen = () => {

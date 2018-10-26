@@ -1,7 +1,3 @@
-.main {
-    
-}
-
 .filter {
     max-width: 1180px;
     width: 100%;
@@ -90,10 +86,6 @@
     margin: 0 auto;
 }
 
-.banners__left {
-
-}
-
 .banners__right {
     display: flex;
 }
@@ -173,10 +165,6 @@
         display: block;
     }
 
-    .banners__left {
-
-    }
-
     .filter-option {
         display: none;
     }
@@ -184,7 +172,6 @@
     .text_smaller-size {
         font-size: 1em;
     }
-
 
     .tablet-filters {
         display: flex;
