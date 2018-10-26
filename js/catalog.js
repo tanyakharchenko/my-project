@@ -83,6 +83,11 @@ const showMore = (button) => {
 
 const filterItems = document.getElementById('filter-items');
 const tabletFilter = document.getElementById('tablet-filters');
+const mobileFilter = document.getElementById('mobile-filters');
+let tabletFilterItemsCollection = document.getElementsByClassName('tablet-filter__item');
+tabletFilterItemsCollection = Array.prototype.slice.call(tabletFilterItemsCollection); //set to collection array's methods
+const tabletButton = document.getElementById('button-tablet-filters');
+const mobileButton = document.getElementById('button-mobile-filters')
 
 const filterState = {
     fashion: 'Not selected',
@@ -92,7 +97,6 @@ const filterState = {
     size: 'Not selected',
     priceRange: 'Not selected'
 }
-
 
 const redrawFilterHead = (filteredItem) => {
     let current = document.getElementById(filteredItem);
@@ -110,6 +114,21 @@ const redrawFilterHead = (filteredItem) => {
 const changeFilterState = () => {
     if (screen.width < 1024) {
         tabletFilter.classList.toggle('none');
+        if (tabletButton.innerHTML == '▼' || mobileButton.innerHTML == '▼') {
+            tabletButton.innerHTML = '×';
+            mobileButton.innerHTML = '×';
+            tabletButton.classList.add('text_red', 'arrow-down_shown_big');
+            mobileButton.classList.add('text_red', 'arrow-down_shown_big');
+        } else if (tabletButton.innerHTML == '×' || mobileButton.innerHTML == '×') {
+            tabletButton.innerHTML = '▼';
+            mobileButton.innerHTML = '▼';
+            tabletButton.classList.remove('text_red', 'arrow-down_shown_big');
+            mobileButton.classList.remove('text_red', 'arrow-down_shown_big');
+        }
+
+        if (screen.width < 768) {
+            changeTabletFilter();
+        }
         return;
     }
 
@@ -120,23 +139,43 @@ const changeFilterState = () => {
     let filteredItem = event.target.parentNode.parentNode.id;
     filterState[filteredItem] = event.target.innerHTML;
 
-
     redrawFilterHead(filteredItem)
 }
 
 const changeTabletFilter = () => {
-    let filteredItem = _.camelCase(event.target.parentNode.previousSibling.previousSibling.innerHTML)
+    if (!event.target.parentNode.previousSibling.previousSibling) return; //catch clicks between menu items
+
+    let categoryName = event.target.parentNode.previousSibling.previousSibling.innerHTML;
+    let filteredItem = _.camelCase(categoryName);
     filterState[filteredItem] = event.target.innerHTML;
 
-    if (event.target.innerHTML == 'Not selected') {
-        return;
+    if (screen.width < 768) {
+        filteredItem += '-mobile';
     }
 
     let current = document.getElementById(filteredItem);
-    current.innerHTML = event.target.innerHTML;
 
-    event.target.classList.add('text_red');
-    current.classList.add('text_red', 'caption_6')
+    if (!current) { //catch clicks between menu items
+        return;
+    }
+
+    tabletFilterItemsCollection.forEach((item) => {
+        let currentCategoryName = item.parentNode.previousSibling.previousSibling.innerHTML;
+        if (categoryName == currentCategoryName) {
+            item.classList.remove('text_red');
+            event.target.classList.add('text_red');
+        }
+        if (event.target.innerHTML == 'Not selected') {
+            event.target.classList.add('text_black');
+            current.innerHTML = categoryName;
+            current.classList.remove('text_red');
+            return;
+        } else {
+            current.innerHTML = event.target.innerHTML;
+            current.classList.add('text_red', 'caption_6')
+            event.target.parentNode.childNodes[1].classList.remove('text_black');
+        }
+    });
 }
 
 const menuList = document.getElementById('menu-list');
@@ -150,7 +189,14 @@ const menArr = window.catalog.filter((item) => {
     if (item.category == 'men') {
         return item;
     }
-})
+});
+
+//filtered content men/women
+
+let headerLinkCollection = document.getElementsByClassName('link_header');
+headerLinkCollection = Array.prototype.slice.call(headerLinkCollection);
+menWomenLinksDesktop = headerLinkCollection.splice(11, 2) //get only "men" and "women" desktop links
+
 
 const filterMenWomen = () => {
     if (event.target.innerHTML == 'Women') {
@@ -159,18 +205,38 @@ const filterMenWomen = () => {
     if (event.target.innerHTML == 'Men') {
         drawItems(menArr);
     }
+    menWomenLinksDesktop.forEach((item) => {
+        if (item.innerHTML == event.target.innerHTML) {
+            item.classList.add('text_red');
+        } else {
+            item.classList.remove('text_red');
+        }
+    });
 }
 
-console.log(window.location.hash)
-if (window.location.hash == '#men') {
-    catalogWrapper.appendChild(drawItems(menArr));
+const checkWhatToDraw = () => { //if "women" or "men" were clicked out of catalog page
+    if (window.location.hash == '#men') {
+        catalogWrapper.appendChild(drawItems(menArr));
+        menWomenLinksDesktop[1].classList.add('text_red'); //[1] it's "men" link in collection
+        menWomenLinksDesktop[0].classList.remove('text_red');
+    }
+    else if (window.location.hash == '#women') {
+        catalogWrapper.appendChild(drawItems(womenArr));
+        menWomenLinksDesktop[0].classList.add('text_red');
+        menWomenLinksDesktop[1].classList.remove('text_red');
+
+    } else {
+        catalogWrapper.appendChild(drawItems(window.catalog))
+    }
 }
-else if (window.location.hash == '#women') {
-    catalogWrapper.appendChild(drawItems(womenArr));
-} else {
-    catalogWrapper.appendChild(drawItems(window.catalog))
-}
+
+checkWhatToDraw();
+
 
 menuList.addEventListener('click', filterMenWomen);
+
 filterItems.addEventListener('click', changeFilterState);
+mobileFilter.addEventListener('click', changeFilterState);
+
+
 tabletFilter.addEventListener('click', changeTabletFilter);

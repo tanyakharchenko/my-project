@@ -75,7 +75,6 @@
 
 .menu_mobile {
     width: 100%;
-    top: 5em;
     background: white;
     z-index: 5;
     position: absolute;
@@ -479,6 +478,10 @@
 
 .text_red {
     color: #f14a58;
+}
+
+.text_black {
+    color: black;
 }
 
 .banners {

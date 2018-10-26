@@ -130,40 +130,8 @@
 }
 
 .tablet-filters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: #8b8888;
+    display: none;
 }
-
-.tablet-filters__element {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
-
-.tablet-filter-caption {
-    color: black;
-    margin-bottom: 2em;
-}
-
-.tablet-filter {
-    list-style-type: circle;
-    margin-bottom: 2em;
-}
-
-.tablet-filter__item {
-    margin-bottom: 1em;
-    cursor: pointer;
-}
-
-.tablet-filter__item:hover {
-    color: #f14a58;
-}
-
-
 
 @media screen and (max-width: 1023px) {
     .arrow-down {
@@ -172,8 +140,14 @@
 
     .arrow-down_shown {
         display: block;
-        right: 34%;
         cursor: pointer;
+        font-size: 0.7em;
+        padding-top: 1.7em; 
+    }
+
+    .arrow-down_shown_big {
+        padding-top: 0.5em; 
+        font-size: 1.5em;
     }
 
     .filter__item:hover .drop-menu {
@@ -209,6 +183,41 @@
 
     .text_smaller-size {
         font-size: 1em;
+    }
+
+
+    .tablet-filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color: #8b8888;
+    }
+    
+    .tablet-filters__element {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+    
+    .tablet-filter-caption {
+        color: black;
+        margin-bottom: 2em;
+    }
+    
+    .tablet-filter {
+        list-style-type: circle;
+        margin-bottom: 2em;
+    }
+    
+    .tablet-filter__item {
+        margin-bottom: 1em;
+        cursor: pointer;
+    }
+    
+    .tablet-filter__item:hover {
+        color: #f14a58;
     }
 }
 
@@ -262,6 +271,7 @@
     .caption_6 {
         white-space: nowrap;
         margin-right: 1em;
+        cursor: pointer;
     }
 
     .caption_3,
@@ -273,9 +283,26 @@
         width: 100%;
     }
 
-    .arrow-down_shown {
-        right: 10%;
-        z-index: 2;
+    .arrow-down_shown { 
+        background: white;
+        width: 22px;
+        text-align: right;
+        padding-top: 0.2em; 
+        font-size: 0.7em;
+    }
+
+    .arrow-down_shown_big {
+        padding-top: 0.2em; 
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .tablet-filters {
+        padding-top: 2em; 
+    }
+
+    .tablet-filters__element {
+        width: 40%;
     }
 
 }
